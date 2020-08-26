@@ -1,4 +1,4 @@
-# `@fliegwerk/logsemts` - A modular, semantic logger written in TypeScript
+# @fliegwerk/logsemts - A modular, semantic logger written in TypeScript
 
 [npm package](https://npmjs.com/package/@fliegwerk/logsemts)
 | [Library Documentation](https://fliegwerk.github.io/logsemts)
