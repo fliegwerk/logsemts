@@ -1,29 +1,65 @@
-import LogFunction from './types/LogFunction';
 import Style from './types/Style';
 
 /**
- * A logger for a specific component
+ * A logger for a specific component like _API Client_, _Message Provider_, or similar
+ *
+ * @internal
+ *
+ * @example ```ts
+ * const = new ComponentLogger((type, style, ...args) => {
+ *     const componentStyle = new Style(
+ *         'red' // text color
+ *         componentBackgroundColor // background color
+ *     );
+ *
+ *     logFunction(type, style, componentName, componentStyle, ...args);
+ * );
+ * ```
  */
 export default class ComponentLogger {
-	constructor(private logFunction: LogFunction) {}
+    /**
+     * @param semanticLogFunction A semantic log function that can already process the type and style of the semantic log type.
+     */
+    constructor(private semanticLogFunction: (type: string, style: Style, ...args: any[]) => void) {
+    }
 
-	debug(...args: any[]) {
-		this.logFunction('DEBUG', new Style('lightgray', 'black'), ...args);
-	}
+    /**
+     * Log some debug information
+     * @param args information that gets logged
+     */
+    debug(...args: any[]) {
+        this.semanticLogFunction('DEBUG', new Style('lightgray', 'black'), ...args);
+    }
 
-	success(...args: any[]) {
-		this.logFunction('SUCCESS', new Style('white', 'green'), ...args);
-	}
+    /**
+     * Log some success information
+     * @param args information that gets logged
+     */
+    success(...args: any[]) {
+        this.semanticLogFunction('SUCCESS', new Style('white', 'green'), ...args);
+    }
 
-	error(...args: any[]) {
-		this.logFunction('ERROR', new Style('white', 'red'), ...args);
-	}
+    /**
+     * Log an error
+     * @param args error information that gets logged
+     */
+    error(...args: any[]) {
+        this.semanticLogFunction('ERROR', new Style('white', 'red'), ...args);
+    }
 
-	warn(...args: any[]) {
-		this.logFunction('WARN', new Style('white', 'orange'), ...args);
-	}
+    /**
+     * Log a warning
+     * @param args warning that gets logged
+     */
+    warn(...args: any[]) {
+        this.semanticLogFunction('WARN', new Style('white', 'orange'), ...args);
+    }
 
-	info(...args: any[]) {
-		this.logFunction('INFO', new Style('white', 'black'), ...args);
-	}
+    /**
+     * Log some information
+     * @param args information that gets logged
+     */
+    info(...args: any[]) {
+        this.semanticLogFunction('INFO', new Style('white', 'black'), ...args);
+    }
 }

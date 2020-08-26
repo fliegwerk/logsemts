@@ -1,6 +1,7 @@
 {
-	"mode": "modules",
-	"out": "docs",
-  	"exclude": "**/*+(.test|.spec|.e2e).ts",
-	"excludeExternals": true
+  "mode": "modules",
+  "out": "docs",
+  "exclude": "**/*+(.test|.spec|.e2e).ts",
+  "excludeExternals": true,
+  "includeVersion": true
 }

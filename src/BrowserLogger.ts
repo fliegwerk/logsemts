@@ -1,12 +1,17 @@
-import { StyleInterface as Style } from './types/Style';
+import LogFunction from "./types/LogFunction";
 
-export default function BrowserLogger(
-	type: string,
-	style: Style,
-	componentName: string,
-	componentStyle: Style,
+/**
+ * A {@link LogFunction} to log the the browser developer tools
+ *
+ * @see {@link LogFunction}
+ */
+const BrowserLogger: LogFunction = (
+	type,
+	style,
+	componentName,
+	componentStyle,
 	...args: any[]
-) {
+) => {
 	console.log(
 		`%c ${type} %c ${componentName} `,
 		style.css,
@@ -14,3 +19,5 @@ export default function BrowserLogger(
 		...args
 	);
 }
+
+export default BrowserLogger;
