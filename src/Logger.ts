@@ -3,6 +3,7 @@ import Style from './types/Style';
 import ComponentLogger from './ComponentLogger';
 import { Options } from './types/Options';
 import BrowserLogger from './loggers/BrowserLogger';
+import ChalkLogger from "./loggers/ChalkLogger";
 
 const componentBackgroundColor = 'lightgray';
 
@@ -60,4 +61,4 @@ export default class Logger {
 	}
 }
 
-export { BrowserLogger };
+export { BrowserLogger, ChalkLogger };

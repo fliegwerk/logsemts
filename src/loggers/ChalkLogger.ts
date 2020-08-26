@@ -7,10 +7,23 @@ import {StyleInterface} from "../types/Style";
  *
  * @param ch The chalk object.
  *
+ * @example ```ts
+ * import { ChalkLogger } from '@fliegwerk/logsemts';
+ * import chalk from 'chalk';
+ *
+ * const loggers = [
+ *     ChalkLogger(chalk) // generates a new LogFunction using the chalk object
+ * ];
+ * ```
+ *
  * @see {@link LogFunction}
  * @see {@link https://github.com/chalk/chalk}
  */
 export default function ChalkLogger(ch: Chalk): LogFunction {
+    /**
+     * @param style the style object
+     * @returns the suitable chalk function (/-chain) for the style
+     */
     function getChalkFunctionForStyle(style: StyleInterface) {
         let fn = ch.bold;
 
@@ -30,7 +43,7 @@ export default function ChalkLogger(ch: Chalk): LogFunction {
     }
 
     /**
-     * Map CSS color name => HEX
+     * Map: CSS color name => HEX
      *
      * Source: https://www.w3schools.com/colors/colors_hex.asp
      */
@@ -185,7 +198,6 @@ export default function ChalkLogger(ch: Chalk): LogFunction {
         componentStyle,
         ...args: any[]
     ) => {
-
         const typeFn = getChalkFunctionForStyle(style)
         const componentFn = getChalkFunctionForStyle(componentStyle)
 

@@ -6,9 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- `ChalkLogger` - a [chalk](https://github.com/chalk/chalk) based logger for NodeJS environments
+- `ChalkLogger` - a [chalk](https://github.com/chalk/chalk) based logger for NodeJS environments:
+  ```ts
+  import { ChalkLogger } from '@fliegwerk/logsemts';
+  import chalk from 'chalk';
+ 
+  const loggers = [
+      ChalkLogger(chalk) // generates a new LogFunction using the chalk object
+  ];
+  ```
 ### Changed
 - moved `BrowserLogger.ts` to `src/loggers` folder
+- updated `BrowserLogger` documentation
 ### Deprecated
 ### Removed
 ### Fixed
