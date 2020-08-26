@@ -42,6 +42,7 @@ export default class Logger {
 	 */
 	constructor(private options: Options) {}
 
+	/* istanbul ignore next */
 	/**
 	 * Returns the logger for a specific subsystem or component
 	 * @param subsystemName the subsystem's or component's name
@@ -70,7 +71,7 @@ export default class Logger {
 						fn(type, style, componentName, componentStyle, ...args);
 				}
 			);
-			this.getSubsystemLogger('Logger').debug('Created logger', componentName);
+			this.getComponentLogger('Logger').debug('Created logger', componentName);
 		}
 
 		return this.availableLoggers[componentName];
