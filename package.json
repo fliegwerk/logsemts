@@ -3,7 +3,6 @@
 	"version": "0.1.1",
 	"description": "A semantic logging solution implemented with TypeScript",
 	"main": "build/Logger.js",
-	"module": "build/Logger.es.js",
 	"types": "build/Logger.d.ts",
 	"scripts": {
 		"test": "jest --coverage",

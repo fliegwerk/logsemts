@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "build",
     "declarationDir": "build",
-    "module": "UMD",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "target": "ES5",
     "declaration": true,
