@@ -14,10 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 ### Fixed
 ### Security
-## [0.11.3] - 2020-06-14
+## [0.1.3] - 2020-06-14
 ### Fixed
 - package issues
-## [0.11.2] - 2020-06-14
+## [0.1.2] - 2020-06-14
 ### Fixed
 - package issues
 
