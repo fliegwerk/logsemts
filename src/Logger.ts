@@ -15,7 +15,7 @@ export default class Logger {
 		// build new subsystem logger if no one is available
 		if (!this.availableLoggers[componentName]) {
 			this.availableLoggers[componentName] = new ComponentLogger(
-				(type, style, args) => {
+				(type, style, ...args) => {
 					const componentStyle = new Style(
 						randomColor({ luminosity: 'dark', seed: componentName }),
 						componentBackgroundColor

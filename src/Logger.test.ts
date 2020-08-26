@@ -1,4 +1,4 @@
-import Logger, { BrowserLogger } from './Logger';
+import Logger from './Logger';
 
 describe('Logger', () => {
 	beforeEach(() => {
@@ -14,5 +14,6 @@ describe('Logger', () => {
 		logger.getSubsystemLogger('Test Component').debug('Hello world');
 
 		expect(logFn).toHaveBeenCalled();
+		expect(logFn).toMatchSnapshot();
 	});
 });
