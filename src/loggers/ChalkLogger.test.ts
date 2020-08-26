@@ -5,12 +5,12 @@ import chalk from "chalk";
 const style1: StyleInterface = {
     background: 'red',
     css: '',
-    color: 'white'
+    color: '#fff'
 }
 
 const style2: StyleInterface = {
     color: 'green',
-    background: 'white',
+    background: '#ffffff',
     css: ''
 }
 
