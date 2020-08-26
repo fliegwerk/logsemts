@@ -8,6 +8,7 @@
 		"test": "jest --coverage",
 		"build": "tsc",
 		"build:docs": "typedoc --options typedoc.json",
+		"version": "node meta-tools/version-update-changelog.js",
 		"prettier": "prettier --write package.json \"src/**/*{.ts,.tsx,.js,.jsx}\"",
 		"prettier:ci": "prettier package.json \"src/**/*{.ts,.tsx,.js,.jsx}\""
 	},
@@ -16,11 +17,13 @@
 	"devDependencies": {
 		"@types/jest": "^26.0.10",
 		"@types/randomcolor": "^0.5.5",
+		"chalk": "^4.1.0",
 		"jest": "^26.4.2",
 		"prettier": "^2.1.1",
+		"shelljs": "^0.8.4",
 		"ts-jest": "^26.3.0",
-		"typescript": "^4.0.2",
-		"typedoc": "TypeStrong/typedoc#feat/639"
+		"typedoc": "^0.18.0",
+		"typescript": "^4.0.2"
 	},
 	"dependencies": {
 		"randomcolor": "^0.6.2"
