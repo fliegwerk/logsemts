@@ -55,7 +55,7 @@ export default class Style implements StyleInterface {
 	 * Function that gets used when calling `JSON.stringify()`.
 	 *
 	 * Overwritten in order to include the {@link css} accessor in the serialized styles.
-     *
+	 *
 	 * @returns Serializable form of the style, cf. example
 	 *
 	 * @example ```json
