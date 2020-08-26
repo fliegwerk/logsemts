@@ -1,6 +1,6 @@
 {
-	"inputFiles": ["./src"],
-	"mode": "modules",
+	"mode": "file",
 	"out": "docs",
+  	"exclude": "**/*+(.test|.spec|.e2e).ts",
 	"excludeExternals": true
 }

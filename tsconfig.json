@@ -2,7 +2,8 @@
   "compilerOptions": {
     "outDir": "build",
     "declarationDir": "build",
-    "module": "es6",
+    "module": "UMD",
+    "moduleResolution": "Node",
     "target": "ES5",
     "declaration": true,
     "sourceMap": true,
@@ -11,5 +12,6 @@
   },
   "include": [
     "src/**/*"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
