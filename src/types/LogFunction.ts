@@ -1,4 +1,4 @@
-import {StyleInterface} from './Style';
+import { StyleInterface } from './Style';
 
 /**
  * A function that logs the semantic information (including its style) to a specific system.

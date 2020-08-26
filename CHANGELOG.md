@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - documentation
+- README
+- Coverage reporting to coveralls.io
+- keywords to `package.json`
 ### Changed
 ### Deprecated
 ### Removed

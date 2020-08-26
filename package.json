@@ -2,6 +2,29 @@
 	"name": "@fliegwerk/logsemts",
 	"version": "0.1.4",
 	"description": "A semantic logging solution implemented with TypeScript",
+	"keywords": [
+		"logger",
+		"logging",
+		"typescript",
+		"semantic",
+		"color",
+		"color-coded",
+		"browser",
+		"nodejs"
+	],
+	"repository": "fliegwerk/logsemts",
+	"bugs": {
+		"url": "https://github.com/fliegwerk/logsemts/issues",
+		"email": "cockpit@fliegwerk.com"
+	},
+	"homepage": "https://fliegwerk.github.io/logsemts/",
+	"contributors": [
+		{
+			"email": "klaschka@fliegwerk.com",
+			"name": "Pablo Klaschka",
+			"url": "https://github.com/pklaschka"
+		}
+	],
 	"main": "build/Logger.js",
 	"types": "build/Logger.d.ts",
 	"scripts": {
