@@ -1,0 +1,26 @@
+{
+	"name": "@fliegwerk/logsemts",
+	"version": "0.1.0",
+	"description": "A semantic logging solution implemented with TypeScript",
+	"main": "build/Logger.js",
+	"scripts": {
+		"test": "jest --coverage",
+		"build": "tsc",
+		"build:docs": "typedoc --options typedoc.json",
+		"prettier": "prettier --write package.json \"src/**/*{.ts,.tsx,.js,.jsx}\"",
+		"prettier:ci": "prettier package.json \"src/**/*{.ts,.tsx,.js,.jsx}\""
+	},
+	"author": "fliegwerk",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^26.0.10",
+		"@types/randomcolor": "^0.5.5",
+		"jest": "^26.4.2",
+		"prettier": "^2.1.1",
+		"ts-jest": "^26.3.0",
+		"typescript": "^4.0.2"
+	},
+	"dependencies": {
+		"randomcolor": "^0.6.2"
+	}
+}

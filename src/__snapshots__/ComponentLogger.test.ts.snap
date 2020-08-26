@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentLogger should log debug messages 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "DEBUG",
+      Object {
+        "background": "black",
+        "color": "lightgray",
+        "css": "color: lightgray; background-color: black; font-weight: bold;",
+      },
+      "Test",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`ComponentLogger should log error messages 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "ERROR",
+      Object {
+        "background": "red",
+        "color": "white",
+        "css": "color: white; background-color: red; font-weight: bold;",
+      },
+      "Test",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`ComponentLogger should log info messages 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "INFO",
+      Object {
+        "background": "black",
+        "color": "white",
+        "css": "color: white; background-color: black; font-weight: bold;",
+      },
+      "Test",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`ComponentLogger should log success messages 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "SUCCESS",
+      Object {
+        "background": "green",
+        "color": "white",
+        "css": "color: white; background-color: green; font-weight: bold;",
+      },
+      "Test",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`ComponentLogger should log waring messages 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "WARN",
+      Object {
+        "background": "orange",
+        "color": "white",
+        "css": "color: white; background-color: orange; font-weight: bold;",
+      },
+      "Test",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
