@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- `ChalkLogger` - a [chalk](https://github.com/chalk/chalk) based logger for NodeJS environments
 ### Changed
+- moved `BrowserLogger.ts` to `src/loggers` folder
 ### Deprecated
 ### Removed
 ### Fixed

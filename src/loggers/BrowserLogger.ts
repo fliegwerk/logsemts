@@ -1,4 +1,4 @@
-import LogFunction from './types/LogFunction';
+import LogFunction from '../types/LogFunction';
 
 /**
  * A {@link LogFunction} to log the the browser developer tools
