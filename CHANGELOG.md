@@ -15,10 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       ChalkLogger(chalk) // generates a new LogFunction using the chalk object
   ];
   ```
+- `Logger.getComponentLogger` - replaces `Logger.getSubsystemLogger`
 ### Changed
 - moved `BrowserLogger.ts` to `src/loggers` folder
 - updated `BrowserLogger` documentation
+- Terminology: _subsystem_ => _component_
 ### Deprecated
+- `Logger.getSubsystemLogger` - use `Logger.getComponentLogger` instead
 ### Removed
 ### Fixed
 ### Security

@@ -11,7 +11,7 @@ describe('Logger', () => {
 		const logger = new Logger({
 			loggers: [logFn]
 		});
-		logger.getSubsystemLogger('Test Component').debug('Hello world');
+		logger.getComponentLogger('Test Component').debug('Hello world');
 
 		expect(logFn).toHaveBeenCalled();
 		expect(logFn).toMatchSnapshot();

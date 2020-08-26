@@ -12,9 +12,9 @@ const componentBackgroundColor = 'lightgray';
  *
  * Manages a number of LogFunctions, to which logs get passed. These can, e.g., log the entries to the browser console or send it to a remote database.
  *
- * For each subsystem (e.g., an _API Client_), a new component logger gets used which can be fetched using `getComponentLogger()`.
+ * For each subsystem (e.g., an _API Client_), a new component logger gets used which can be fetched using {@link Logger.getSubsystemLogger}
  *
- * This {@link ComponentLogger} then contains multiple semantic logging functions including `success()`, `debug()` and `error()`.
+ * This {@link ComponentLogger} then contains multiple semantic logging functions including {@link ComponentLogger.success}, {@link ComponentLogger.error}, {@link ComponentLogger.warn}, and {@link ComponentLogger.debug}.
  *
  * The console output is color-coded. The semantic log levels have pre-defined colors and the components get color-coded with a color that's from their name.
  *
@@ -31,16 +31,32 @@ const componentBackgroundColor = 'lightgray';
 export default class Logger {
 	/**
 	 * The component loggers that were already created.
+	 *
+	 * @see {@link Logger.getSubsystemLogger}
 	 */
 	private availableLoggers: { [key: string]: ComponentLogger } = {};
 
 	/**
-	 * Create a new logger. Usually gets used only once per application (as a singleton)
+	 * Create a new {@link Logger}. Usually gets used only once per application (as a singleton)
 	 * @param options
 	 */
 	constructor(private options: Options) {}
 
-	getSubsystemLogger(componentName: string) {
+	/**
+	 * Returns the logger for a specific subsystem or component
+	 * @param subsystemName the subsystem's or component's name
+	 *
+	 * @deprecated Use {@link getComponentLogger} instead.
+	 */
+	getSubsystemLogger(subsystemName: string) {
+		return this.getComponentLogger(subsystemName);
+	}
+
+	/**
+	 * Returns the logger for a specific component
+	 * @param componentName the component's name
+	 */
+	getComponentLogger(componentName: string) {
 		// build new subsystem logger if no one is available
 		if (!this.availableLoggers[componentName]) {
 			this.availableLoggers[componentName] = new ComponentLogger(
