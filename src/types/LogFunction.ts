@@ -1,4 +1,4 @@
-import Style from './Style';
+import {StyleInterface} from './Style';
 
 /**
  * A function that logs the semantic information (including its style) to a specific system.
@@ -18,9 +18,9 @@ type LogFunction =
 	 */
 	(
 		type: string,
-		style: Style,
+		style: StyleInterface,
 		componentName: string,
-		componentStyle: Style,
+		componentStyle: StyleInterface,
 		...args: any[]
 	) => void;
 
