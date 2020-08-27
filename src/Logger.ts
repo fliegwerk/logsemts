@@ -5,6 +5,11 @@ import { Options } from './types/Options';
 import BrowserLogger from './loggers/BrowserLogger';
 import ChalkLogger from "./loggers/ChalkLogger";
 
+/**
+ * The component background color
+ *
+ * @internal
+ */
 const componentBackgroundColor = 'lightgray';
 
 /**
@@ -79,3 +84,5 @@ export default class Logger {
 }
 
 export { BrowserLogger, ChalkLogger };
+
+export * from './lib/cyclic-serializer';

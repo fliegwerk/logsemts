@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deserialize() should deserialize cyclic properties: deserialized 1`] = `
+Object {
+  "b": Object {
+    "a": [Circular],
+  },
+}
+`;
+
+exports[`serialize() should serialize arrays 1`] = `"{\\"pool\\":[[],\\"abc\\",\\"cde\\"],\\"modifiers\\":{\\"\\":0,\\"->0\\":1,\\"->1\\":2}}"`;
+
+exports[`serialize() should serialize booleans 1`] = `"{\\"pool\\":[true],\\"modifiers\\":{\\"\\":0}}"`;
+
+exports[`serialize() should serialize booleans 2`] = `"{\\"pool\\":[false],\\"modifiers\\":{\\"\\":0}}"`;
+
+exports[`serialize() should serialize cyclic properties: a 1`] = `
+Object {
+  "b": Object {
+    "a": [Circular],
+  },
+}
+`;
+
+exports[`serialize() should serialize cyclic properties: serialized a 1`] = `
+Object {
+  "modifiers": Object {
+    "": 0,
+    "->b": 1,
+    "->b->a": 0,
+  },
+  "pool": Array [
+    Object {},
+    Object {},
+  ],
+}
+`;
+
+exports[`serialize() should serialize functions to strings 1`] = `"{\\"pool\\":[\\"function () { return console.log('Hello World!'); }\\"],\\"modifiers\\":{\\"\\":0}}"`;
+
+exports[`serialize() should serialize numbers 1`] = `"{\\"pool\\":[3],\\"modifiers\\":{\\"\\":0}}"`;
+
+exports[`serialize() should serialize regular expressions to strings 1`] = `"{\\"pool\\":[\\"/.*/g\\"],\\"modifiers\\":{\\"\\":0}}"`;
+
+exports[`serialize() should serialize strings 1`] = `"{\\"pool\\":[\\"abc\\"],\\"modifiers\\":{\\"\\":0}}"`;

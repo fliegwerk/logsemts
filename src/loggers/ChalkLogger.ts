@@ -11,6 +11,8 @@ import {StyleInterface} from "../types/Style";
  * @see {@link LogFunction}
  * @see {@link https://github.com/chalk/chalk}
  *
+ * @category LogFunction / LogFunction Factory
+ *
  * @example ```ts
  * import { ChalkLogger } from '@fliegwerk/logsemts';
  * import chalk from 'chalk';

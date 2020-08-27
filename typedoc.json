@@ -1,7 +1,8 @@
 {
-  "mode": "modules",
+  "mode": "file",
   "out": "docs",
   "exclude": "**/*+(.test|.spec|.e2e).ts",
   "excludeExternals": true,
-  "includeVersion": true
+  "includeVersion": true,
+  "stripInternal": true
 }

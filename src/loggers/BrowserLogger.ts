@@ -3,6 +3,9 @@ import LogFunction from '../types/LogFunction';
 /**
  * A {@link LogFunction} to log the the browser developer tools
  *
+ * @category LogFunction / LogFunction Factory
+ * @see {@link LogFunction}
+ *
  * @example ```ts
  * import { BrowserLogger } from '@fliegwerk/logsemts';
  *
@@ -10,8 +13,6 @@ import LogFunction from '../types/LogFunction';
  *     BrowserLogger // a LogFunction to log into the browser dev tools
  * ];
  * ```
- *
- * @see {@link LogFunction}
  */
 const BrowserLogger: LogFunction = (
 	type,
