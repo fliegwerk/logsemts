@@ -21,7 +21,7 @@ const logger = new Logger({
 });
 
 // get a new subsystem logger for the API Client
-const apiClientLogger = logger.getSubsystemLogger('API Client'); 
+const apiClientLogger = logger.getComponentLogger('API Client'); 
 
 // log a success message 
 apiClientLogger.success('Data fetched successfully');

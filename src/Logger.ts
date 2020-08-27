@@ -12,7 +12,7 @@ const componentBackgroundColor = 'lightgray';
  *
  * Manages a number of LogFunctions, to which logs get passed. These can, e.g., log the entries to the browser console or send it to a remote database.
  *
- * For each subsystem (e.g., an _API Client_), a new component logger gets used which can be fetched using {@link Logger.getSubsystemLogger}
+ * For each subsystem (e.g., an _API Client_), a new component logger gets used which can be fetched using {@link Logger.getComponentLogger}
  *
  * This {@link ComponentLogger} then contains multiple semantic logging functions including {@link ComponentLogger.success}, {@link ComponentLogger.error}, {@link ComponentLogger.warn}, and {@link ComponentLogger.debug}.
  *
@@ -25,14 +25,14 @@ const componentBackgroundColor = 'lightgray';
  * import Logger, {BrowserLogger} from '@fliegwerk/logsemts';
  *
  * const logger = new Logger({loggers: [BrowserLogger]});
- * logger.getSubsystemLogger('API Client').success('fetched API data');
+ * logger.getComponentLogger('API Client').success('fetched API data');
  * ```
  */
 export default class Logger {
 	/**
 	 * The component loggers that were already created.
 	 *
-	 * @see {@link Logger.getSubsystemLogger}
+	 * @see {@link Logger.getComponentLogger}
 	 */
 	private availableLoggers: { [key: string]: ComponentLogger } = {};
 
