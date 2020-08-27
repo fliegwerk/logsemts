@@ -38,8 +38,12 @@ Object {
 
 exports[`serialize() should serialize functions to strings 1`] = `"{\\"pool\\":[\\"function () { return console.log('Hello World!'); }\\"],\\"modifiers\\":{\\"\\":0}}"`;
 
+exports[`serialize() should serialize null 1`] = `"{\\"pool\\":[null],\\"modifiers\\":{\\"\\":0}}"`;
+
 exports[`serialize() should serialize numbers 1`] = `"{\\"pool\\":[3],\\"modifiers\\":{\\"\\":0}}"`;
 
 exports[`serialize() should serialize regular expressions to strings 1`] = `"{\\"pool\\":[\\"/.*/g\\"],\\"modifiers\\":{\\"\\":0}}"`;
 
 exports[`serialize() should serialize strings 1`] = `"{\\"pool\\":[\\"abc\\"],\\"modifiers\\":{\\"\\":0}}"`;
+
+exports[`serialize() should serialize two references to the same array 1`] = `"{\\"pool\\":[[],[],1,2],\\"modifiers\\":{\\"\\":0,\\"->0\\":1,\\"->0->0\\":2,\\"->0->1\\":3,\\"->1\\":1}}"`;

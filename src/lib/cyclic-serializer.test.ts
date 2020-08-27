@@ -3,8 +3,7 @@ import {deserialize, serialize} from "./cyclic-serializer";
 describe('serialize()', () => {
     it('should serialize cyclic properties', () => {
         let a: any = {};
-        let b = {a};
-        a['b'] = b;
+        a['b'] = {a};
 
         expect(a).toMatchSnapshot('a');
         const serialized = JSON.parse(serialize(a));
@@ -36,6 +35,13 @@ describe('serialize()', () => {
         expect(serialize(['abc', 'cde'])).toMatchSnapshot()
     })
 
+    it('should serialize two references to the same array', () => {
+        let arr = [1,2];
+        const serialized = serialize([arr, arr]);
+        expect(serialized).toMatchSnapshot()
+        expect(typeof serialized).toBe('string');
+    })
+
     it('should serialize regular expressions to strings', () => {
         const serialized = serialize(/.*/g);
         expect(serialized).toMatchSnapshot()
@@ -44,6 +50,12 @@ describe('serialize()', () => {
 
     it('should serialize functions to strings', () => {
         const serialized = serialize(() => console.log('Hello World!'));
+        expect(serialized).toMatchSnapshot()
+        expect(typeof serialized).toBe('string');
+    })
+
+    it('should serialize null', () => {
+        const serialized = serialize(null);
         expect(serialized).toMatchSnapshot()
         expect(typeof serialized).toBe('string');
     })

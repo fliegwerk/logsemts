@@ -69,7 +69,7 @@ export function serialize(value: any) {
     const replacer =
         (value: any) => {
             if (Array.isArray(value)) return []
-            else if (typeof value === 'object') return {}
+            else if (typeof value === 'object' && value !== null) return {}
             else return value
         }
 
@@ -149,7 +149,7 @@ function serializeItem(path: string, value: any, instructions: { pool: any[], mo
         addModifierForValue();
 
         // add all object properties as `path->${propertyName}` to the serialization
-        if (poolIndex < 0)
+        if (poolIndex < 0 && value !== null)
             Object.keys(value).forEach((propertyName) => {
                 serializeItem(path + `->${propertyName}`, value[propertyName], instructions);
             })
