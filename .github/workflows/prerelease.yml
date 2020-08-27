@@ -2,9 +2,9 @@ on:
   push:
     # Sequence of patterns matched against refs/tags
     tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+'
 
-name: Release
+name: Prerelease
 
 jobs:
   build:
@@ -22,11 +22,11 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Prerelease ${{ github.ref }}
           body: |
-            Install with `npm install @fliegwerk/logsemts@latest`.
+            Install with `npm install @fliegwerk/logsemts@next`.
 
             For release notes, please check the [Changelog](https://github.com/fliegwerk/logsemts/blob/master/CHANGELOG.md).
           draft: false
-          prerelease: false
+          prerelease: true
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -36,8 +36,8 @@ jobs:
         run: npm test
       - run: npm run build
       - run: npm run build:docs
-      - name: Release on npm @latest
-        run: npm publish --access public --tag latest
+      - name: Release on npm @next
+        run: npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: cp LICENSE build
