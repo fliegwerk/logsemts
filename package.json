@@ -1,6 +1,6 @@
 {
 	"name": "@fliegwerk/logsemts",
-	"version": "0.3.0-3",
+	"version": "0.3.0-4",
 	"description": "A semantic logging solution implemented with TypeScript",
 	"keywords": [
 		"logger",
