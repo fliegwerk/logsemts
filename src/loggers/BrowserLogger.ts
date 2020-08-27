@@ -1,7 +1,10 @@
+import LogFunctionFactory from '../types/LogFunctionFactory';
 import LogFunction from '../types/LogFunction';
 
 /**
- * A {@link LogFunction} to log the the browser developer tools
+ * A {@link LogFunctionFactory} to log the the browser developer tools
+ *
+ * @return the {@link LogFunction}
  *
  * @category LogFunction / LogFunction Factory
  * @see {@link LogFunction}
@@ -10,11 +13,11 @@ import LogFunction from '../types/LogFunction';
  * import { BrowserLogger } from '@fliegwerk/logsemts';
  *
  * const loggers = [
- *     BrowserLogger // a LogFunction to log into the browser dev tools
+ *     BrowserLogger() // a LogFunction to log into the browser dev tools
  * ];
  * ```
  */
-const BrowserLogger: LogFunction = (
+export const BrowserLogger: () => LogFunction = () => (
 	type,
 	style,
 	componentName,
@@ -28,5 +31,3 @@ const BrowserLogger: LogFunction = (
 		...args
 	);
 };
-
-export default BrowserLogger;

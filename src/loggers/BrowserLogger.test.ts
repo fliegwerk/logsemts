@@ -1,4 +1,4 @@
-import BrowserLogger from './BrowserLogger';
+import { BrowserLogger } from './BrowserLogger';
 import MockedFunction = jest.MockedFunction;
 
 const origConsoleLog = console.log;
@@ -28,7 +28,7 @@ describe('BrowserLogger', () => {
 	});
 
 	it('should call console.log with the correct arguments', () => {
-		BrowserLogger('DEBUG', style1, 'comp', style2, 'Hello world');
+		BrowserLogger()('DEBUG', style1, 'comp', style2, 'Hello world');
 
 		expect(consoleLog).toHaveBeenCalledWith(
 			`%c DEBUG %c comp `,

@@ -1,4 +1,4 @@
-import ChalkLogger from './ChalkLogger';
+import { ChalkLogger } from './ChalkLogger';
 import { StyleInterface } from '../types/Style';
 
 import ch from 'chalk';

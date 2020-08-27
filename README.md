@@ -17,7 +17,7 @@ import Logger, {BrowserLogger} from '@fliegwerk/logsemts';
 
 // Create a new logger
 const logger = new Logger({
-    loggers: [BrowserLogger] // that exclusively outputs to the browser dev tools
+    loggers: [BrowserLogger()] // that exclusively outputs to the browser dev tools
 });
 
 // get a new subsystem logger for the API Client

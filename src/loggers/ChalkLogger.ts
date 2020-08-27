@@ -1,9 +1,10 @@
 import LogFunction from '../types/LogFunction';
 import { Chalk } from 'chalk';
 import { StyleInterface } from '../types/Style';
+import LogFunctionFactory from '../types/LogFunctionFactory';
 
 /**
- * A {@link LogFunction} generator to log the the terminal in NodeJS using the {@link https://github.com/chalk/chalk|chalk} library
+ * A {@link LogFunctionFactory} to log the the terminal in NodeJS using the {@link https://github.com/chalk/chalk|chalk} library
  *
  * @param ch The chalk object.
  * @returns the {@link LogFunction}
@@ -22,7 +23,7 @@ import { StyleInterface } from '../types/Style';
  * ];
  * ```
  */
-const ChalkLogger: (ch: Chalk) => LogFunction = ch => {
+export const ChalkLogger: (ch: Chalk) => LogFunction = (ch: Chalk) => {
 	/**
 	 * @param style the style object
 	 * @returns the suitable chalk function (/-chain) for the style
@@ -204,5 +205,3 @@ const ChalkLogger: (ch: Chalk) => LogFunction = ch => {
 		);
 	};
 };
-
-export default ChalkLogger;
