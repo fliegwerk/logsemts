@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   ```
 - `Logger.getComponentLogger` - replaces `Logger.getSubsystemLogger`
 - `serialize()` and `deserialize()` - serializer that supports cyclic structures (`a['b']['a'] === a`) for sending objects in logs over network
+- better CI release automation
 ### Changed
 - moved `BrowserLogger.ts` to `src/loggers` folder
 - updated `BrowserLogger` documentation

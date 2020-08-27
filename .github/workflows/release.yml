@@ -1,0 +1,47 @@
+name: Publish release
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - name: Tests
+        run: npm test
+      - run: npm run build
+      - run: npm run build:docs
+      - run: npm publish --access public --tag latest
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: cp LICENSE build
+      - run: cp README.md build
+      - run: zip -r docs.zip docs
+      - run: zip -r build.zip build
+      - name: Upload docs folder
+          id: upload-docs
+          uses: actions/upload-release-asset@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+            asset_path: ./docs.zip
+            asset_name: Documentation
+            asset_content_type: application/zip
+      - name: Upload build folder
+          id: upload-build
+          uses: actions/upload-release-asset@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+            asset_path: ./build.zip
+            asset_name: Build
+            asset_content_type: application/zip
