@@ -33,7 +33,7 @@
 		"build:docs": "typedoc --options typedoc.json",
 		"version": "node meta-tools/version-update-changelog.js",
 		"prettier": "prettier --write package.json \"src/**/*{.ts,.tsx,.js,.jsx}\"",
-		"prettier:ci": "prettier package.json \"src/**/*{.ts,.tsx,.js,.jsx}\""
+		"prettier:ci": "prettier --check package.json \"src/**/*{.ts,.tsx,.js,.jsx}\""
 	},
 	"author": "fliegwerk",
 	"license": "MIT",
