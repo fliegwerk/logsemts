@@ -8,11 +8,13 @@ Object {
 }
 `;
 
-exports[`serialize() should serialize arrays 1`] = `"{\\"pool\\":[[],\\"abc\\",\\"cde\\"],\\"modifiers\\":{\\"\\":0,\\"->0\\":1,\\"->1\\":2}}"`;
+exports[`serialize() should serialize a regular expression 1`] = `"{\\"pool\\":[\\"/fwjeofj/g\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"regexp\\"]}"`;
 
-exports[`serialize() should serialize booleans 1`] = `"{\\"pool\\":[true],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize arrays 1`] = `"{\\"pool\\":[[],\\"abc\\",\\"cde\\"],\\"pointers\\":{\\"\\":0,\\"->0\\":1,\\"->1\\":2},\\"types\\":[\\"object\\",\\"string\\",\\"string\\"]}"`;
 
-exports[`serialize() should serialize booleans 2`] = `"{\\"pool\\":[false],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize booleans 1`] = `"{\\"pool\\":[true],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"boolean\\"]}"`;
+
+exports[`serialize() should serialize booleans 2`] = `"{\\"pool\\":[false],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"boolean\\"]}"`;
 
 exports[`serialize() should serialize cyclic properties: a 1`] = `
 Object {
@@ -24,7 +26,7 @@ Object {
 
 exports[`serialize() should serialize cyclic properties: serialized a 1`] = `
 Object {
-  "modifiers": Object {
+  "pointers": Object {
     "": 0,
     "->b": 1,
     "->b->a": 0,
@@ -33,21 +35,23 @@ Object {
     Object {},
     Object {},
   ],
+  "types": Array [
+    "object",
+    "object",
+  ],
 }
 `;
 
-exports[`serialize() should serialize functions to strings 1`] = `"{\\"pool\\":[\\"function () { return console.log('Hello World!'); }\\"],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize functions to strings 1`] = `"{\\"pool\\":[\\"function () { return console.log('Hello World!'); }\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"function\\"]}"`;
 
-exports[`serialize() should serialize null 1`] = `"{\\"pool\\":[null],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize null 1`] = `"{\\"pool\\":[null],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"object\\"]}"`;
 
-exports[`serialize() should serialize numbers 1`] = `"{\\"pool\\":[3],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize numbers 1`] = `"{\\"pool\\":[3],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"number\\"]}"`;
 
-exports[`serialize() should serialize regular expressions to strings 1`] = `"{\\"pool\\":[\\"/.*/g\\"],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize strings 1`] = `"{\\"pool\\":[\\"abc\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"string\\"]}"`;
 
-exports[`serialize() should serialize strings 1`] = `"{\\"pool\\":[\\"abc\\"],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize symbols to strings 1`] = `"{\\"pool\\":[\\"Symbol(abc)\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"symbol\\"]}"`;
 
-exports[`serialize() should serialize symbols to strings 1`] = `"{\\"pool\\":[\\"Symbol(abc)\\"],\\"modifiers\\":{\\"\\":0}}"`;
+exports[`serialize() should serialize two references to the same array 1`] = `"{\\"pool\\":[[],[],1,2],\\"pointers\\":{\\"\\":0,\\"->0\\":1,\\"->0->0\\":2,\\"->0->1\\":3,\\"->1\\":1},\\"types\\":[\\"object\\",\\"object\\",\\"number\\",\\"number\\"]}"`;
 
-exports[`serialize() should serialize two references to the same array 1`] = `"{\\"pool\\":[[],[],1,2],\\"modifiers\\":{\\"\\":0,\\"->0\\":1,\\"->0->0\\":2,\\"->0->1\\":3,\\"->1\\":1}}"`;
-
-exports[`serialize() should serialize undefined 1`] = `"{\\"pool\\":[],\\"modifiers\\":{}}"`;
+exports[`serialize() should serialize undefined 1`] = `"{\\"pool\\":[],\\"pointers\\":{},\\"types\\":[]}"`;
