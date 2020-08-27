@@ -22,7 +22,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Prerelease ${{ github.ref }}
           body: |
-            Install with `npm install @fliegwerk/logsemts@next`.
+            Install with [`npm install @fliegwerk/logsemts@next`](https://www.npmjs.com/package/@fliegwerk/logsemts/v/next).
 
             For release notes, please check the [Changelog](https://github.com/fliegwerk/logsemts/blob/master/CHANGELOG.md).
           draft: false
@@ -52,7 +52,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           asset_path: ./docs.zip
-          asset_name: Documentation
+          asset_name: docs.zip
           asset_content_type: application/zip
       - name: Upload build folder
         id: upload-build
@@ -62,5 +62,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           asset_path: ./build.zip
-          asset_name: Build
+          asset_name: build.zip
           asset_content_type: application/zip
