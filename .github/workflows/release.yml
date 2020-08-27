@@ -2,7 +2,7 @@ name: Publish release
 
 on:
   release:
-    types: [released]
+    types: [published]
 
 jobs:
   build:
@@ -18,7 +18,14 @@ jobs:
         run: npm test
       - run: npm run build
       - run: npm run build:docs
-      - run: npm publish --access public --tag latest
+      - name: Release on npm @latest
+        if: ${{ !github.event.release.prerelease }}
+        run: npm publish --access public --tag latest
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - name: Release on npm @next
+        if: ${{ github.event.release.prerelease }}
+        run: npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: cp LICENSE build
