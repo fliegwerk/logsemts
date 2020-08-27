@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 ### Fixed
 ### Security
+## [0.3.0-5] - 2020-08-27
 ## [0.3.0-4] - 2020-08-27
 ## [0.3.0-3] - 2020-08-27
 ## [0.3.0-2] - 2020-08-27
@@ -66,7 +67,7 @@ ChalkLogger(chalk) // generates a new LogFunction using the chalk object
 ## v0.1.1 - 2020-08-26
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-4...HEAD
+[Unreleased]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-5...HEAD
 [0.1.2]: https://github.com/fliegwerk/logsemts/compare/v0.1.1...v0.1.2
 [0.1.3]: https://github.com/fliegwerk/logsemts/compare/v0.1.2...v0.1.3
 [0.1.4]: https://github.com/fliegwerk/logsemts/compare/v0.1.3...v0.1.4
@@ -76,3 +77,4 @@ Initial prerelease.
 [0.3.0-2]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-1...v0.3.0-2
 [0.3.0-3]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-2...v0.3.0-3
 [0.3.0-4]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-3...v0.3.0-4
+[0.3.0-5]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-4...v0.3.0-5
