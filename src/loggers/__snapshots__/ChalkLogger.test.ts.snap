@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChalkLogger should ignore invalid color names 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[bold]( Test )[bold]( ChalkLogger Test )",
+      "Hello world",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`ChalkLogger should log valid inputs correctly 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[bold]([hex,#fff]([bgHex,#ff0000]( TEST )))[bold]([hex,#008000]([bgHex,#ffffff]( ChalkLogger Test )))",
+      "Hello world",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;

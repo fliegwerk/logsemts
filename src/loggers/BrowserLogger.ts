@@ -1,7 +1,15 @@
-import LogFunction from './types/LogFunction';
+import LogFunction from '../types/LogFunction';
 
 /**
  * A {@link LogFunction} to log the the browser developer tools
+ *
+ * @example ```ts
+ * import { BrowserLogger } from '@fliegwerk/logsemts';
+ *
+ * const loggers = [
+ *     BrowserLogger // a LogFunction to log into the browser dev tools
+ * ];
+ * ```
  *
  * @see {@link LogFunction}
  */
