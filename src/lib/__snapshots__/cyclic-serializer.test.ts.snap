@@ -46,4 +46,8 @@ exports[`serialize() should serialize regular expressions to strings 1`] = `"{\\
 
 exports[`serialize() should serialize strings 1`] = `"{\\"pool\\":[\\"abc\\"],\\"modifiers\\":{\\"\\":0}}"`;
 
+exports[`serialize() should serialize symbols to strings 1`] = `"{\\"pool\\":[\\"Symbol(abc)\\"],\\"modifiers\\":{\\"\\":0}}"`;
+
 exports[`serialize() should serialize two references to the same array 1`] = `"{\\"pool\\":[[],[],1,2],\\"modifiers\\":{\\"\\":0,\\"->0\\":1,\\"->0->0\\":2,\\"->0->1\\":3,\\"->1\\":1}}"`;
+
+exports[`serialize() should serialize undefined 1`] = `"{\\"pool\\":[],\\"modifiers\\":{}}"`;

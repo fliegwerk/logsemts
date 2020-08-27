@@ -54,8 +54,20 @@ describe('serialize()', () => {
         expect(typeof serialized).toBe('string');
     })
 
+    it('should serialize symbols to strings', () => {
+        const serialized = serialize(Symbol('abc'));
+        expect(serialized).toMatchSnapshot()
+        expect(typeof serialized).toBe('string');
+    })
+
     it('should serialize null', () => {
         const serialized = serialize(null);
+        expect(serialized).toMatchSnapshot()
+        expect(typeof serialized).toBe('string');
+    })
+
+    it('should serialize undefined', () => {
+        const serialized = serialize(undefined);
         expect(serialized).toMatchSnapshot()
         expect(typeof serialized).toBe('string');
     })
@@ -78,5 +90,10 @@ describe('deserialize()', () => {
         const deserialized = deserialize(JSON.stringify(serialized));
         expect(deserialized).toMatchSnapshot('deserialized');
         expect(deserialized['b']['a']).toBe(deserialized);
+    })
+
+    it('should deserialize undefined', () => {
+        const serialized = {pool:[], modifiers: {}};
+        expect(deserialize(JSON.stringify(serialized))).toBeUndefined();
     })
 })

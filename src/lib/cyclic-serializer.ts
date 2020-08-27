@@ -89,21 +89,17 @@ export function deserialize(serialized: string) {
 
     let builder: any = {}; // create an empty object in which the value can get built
 
-    for (let modifier in instructions.modifiers) {
-        if (instructions.modifiers.hasOwnProperty(modifier)) {
-            const steps = modifier.split('->');
+    for (let modifier of Object.keys(instructions.modifiers)) {
+        const steps = modifier.split('->');
 
-            if (steps.length) {
-                const toSet = steps.pop();
+        const toSet = steps.pop();
 
-                let current: any = builder;
-                steps.forEach(step => {
-                    current = current[step]
-                })
+        let current: any = builder;
+        steps.forEach(step => {
+            current = current[step]
+        })
 
-                current[toSet!] = instructions.pool[instructions.modifiers[modifier]];
-            }
-        }
+        current[toSet!] = instructions.pool[instructions.modifiers[modifier]];
     }
 
     return builder[''];
@@ -134,7 +130,7 @@ function serializeItem(path: string, value: any, instructions: { pool: any[], mo
         instructions.modifiers[path] = valueExistsInPool ? poolIndex : instructions.pool.push(value) - 1;
     }
 
-    if (typeof value === 'function' || value instanceof RegExp) {
+    if (typeof value === 'function' || value instanceof RegExp || typeof value === 'symbol') {
         // handle functions and regular expressions as a strings
         serializeItem(path, value.toString(), instructions);
     } else if (Array.isArray(value)) {
