@@ -1,6 +1,7 @@
 <p align="center">
 <img alt="LogSemTS Logo" height="300" src="./logo.png" />
 </p>
+
 # @fliegwerk/logsemts - A modular, semantic logger written in TypeScript
 
 [npm package](https://npmjs.com/package/@fliegwerk/logsemts)
