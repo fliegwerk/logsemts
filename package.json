@@ -30,7 +30,7 @@
 	"scripts": {
 		"test": "jest --coverage",
 		"build": "tsc",
-		"build:docs": "typedoc --options typedoc.json",
+		"build:docs": "typedoc --options typedoc.json && cpy --parents assets docs",
 		"version": "node meta-tools/version-update-changelog.js",
 		"prettier": "prettier --write package.json \"src/**/*{.ts,.tsx,.js,.jsx}\"",
 		"prettier:ci": "prettier --check package.json \"src/**/*{.ts,.tsx,.js,.jsx}\""
@@ -41,6 +41,7 @@
 		"@types/jest": "^26.0.10",
 		"@types/randomcolor": "^0.5.5",
 		"chalk": "^4.1.0",
+		"cpy-cli": "^3.1.1",
 		"jest": "^26.4.2",
 		"prettier": "^2.1.1",
 		"shelljs": "^0.8.4",
@@ -52,6 +53,7 @@
 		"chalk": "^4.1.0"
 	},
 	"dependencies": {
+		"cross-fetch": "^3.0.5",
 		"randomcolor": "^0.6.2"
 	}
 }
