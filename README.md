@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="LogSemTS Logo" height="300" src="./logo.png" />
+<img alt="LogSemTS Logo" height="300" src="assets/logo.png" />
 </p>
 
 # @fliegwerk/logsemts - A modular, semantic logger written in TypeScript
@@ -41,3 +41,17 @@ or
 ```shell script
 $ yarn add @fliegwerk/logsemts
 ```
+
+## Concept
+![Concept Overview Diagram](assets/drawio/concept-overview.png)
+
+There are three primary components in logsemts:
+
+- _Component Loggers_: Logger objects for specific subsystems (for example, an API connector and a login form).
+  These objects contain functions like `.log()`, `.debug()`, `.warn()`, etc. to log messages regarding this subsystem.
+- _Log Functions_: Functions that log a message to a specific target. Targets could be the Browser's Developer tools, a 
+  Database and an API.
+- _Core_: The library's core consists of the `Logger` class. Usually, only one instance of that class gets used in an
+  application. It manages the different components (_Component Loggers_ get created using the 
+  `logger.getComponentLogger(name)` function) and _Log Functions_. It also forwards the messages from the _Component
+  Loggers_ to the registered _Log Functions_.
