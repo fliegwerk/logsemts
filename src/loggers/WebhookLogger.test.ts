@@ -47,5 +47,5 @@ describe('WebhookLogger', () => {
 		);
 
 		expect(mocked(fetch, true)).toHaveBeenCalled();
-	})
+	});
 });

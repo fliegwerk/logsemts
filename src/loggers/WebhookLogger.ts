@@ -33,6 +33,8 @@ export const WebhookLogger: (
 		fetch(options.address, {
 			body: serialize(args),
 			method: 'POST'
-		}).then().catch(() => {});
+		})
+			.then()
+			.catch(() => {});
 	};
 };
