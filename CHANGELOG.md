@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.3.0-7] - 2020-08-31
 
 ### Added
 
@@ -16,8 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 import { PlainLogger } from '@fliegwerk/logsemts';
 
 const loggers = [
-	PlainLogger(), // a LogFunction to log into the browser dev tools
-	PlainLogger({ logFunction: myFunction }) // use myFunction instead of console.log
+PlainLogger(), // a LogFunction to log into the browser dev tools
+PlainLogger({ logFunction: myFunction }) // use myFunction instead of console.log
 ];
 ```
 
@@ -27,8 +34,8 @@ const loggers = [
 import { WebhookLogger } from '@fliegwerk/logsemts';
 
 const loggers = [
-	// sends a serialized JSON form of the message to the specified address
-	WebHookLogger({ address: 'http://localhost:8080' })
+// sends a serialized JSON form of the message to the specified address
+WebHookLogger({ address: 'http://localhost:8080' })
 ];
 ```
 
@@ -41,8 +48,6 @@ const loggers = [
 ### Removed
 
 ### Fixed
-
-### Security
 
 ## [0.3.0-6] - 2020-08-27
 
@@ -78,7 +83,7 @@ import { ChalkLogger } from '@fliegwerk/logsemts';
 import chalk from 'chalk';
 
 const loggers = [
-	ChalkLogger(chalk) // generates a new LogFunction using the chalk object
+ChalkLogger(chalk) // generates a new LogFunction using the chalk object
 ];
 ```
 
@@ -146,3 +151,4 @@ Initial prerelease.
 [0.3.0-4]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-3...v0.3.0-4
 [0.3.0-5]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-4...v0.3.0-5
 [0.3.0-6]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-5...v0.3.0-6
+[0.3.0-7]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-6...v0.3.0-7
