@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Options | @fliegwerk/logsemts - v0.3.0-7</title>
+	<title>PlainLoggerOptions | @fliegwerk/logsemts - v0.3.0-7</title>
 	<meta name="description" content="Documentation for @fliegwerk/logsemts - v0.3.0-7">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,33 +54,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="options.html">Options</a>
+					<a href="plainloggeroptions.html">PlainLoggerOptions</a>
 				</li>
 			</ul>
-			<h1>Interface Options</h1>
+			<h1>Interface PlainLoggerOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Options for a logger</p>
-					</div>
-					<dl class="tsd-comment-tags">
-						<dt>see</dt>
-						<dd><p><a href="../classes/logger.html">Logger</a></p>
-						</dd>
-					</dl>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Options</span>
+						<span class="target">PlainLoggerOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -91,7 +79,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options.html#loggers" class="tsd-kind-icon">loggers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plainloggeroptions.html#logfunction" class="tsd-kind-icon">log<wbr>Function</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,26 +88,46 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="loggers" class="tsd-anchor"></a>
-					<h3>loggers</h3>
-					<div class="tsd-signature tsd-kind-icon">loggers<span class="tsd-signature-symbol">:</span> <a href="../globals.html#logfunction" class="tsd-signature-type">LogFunction</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="logfunction" class="tsd-anchor"></a>
+					<h3>log<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">log<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f1235c6/src/types/Options.ts#L15">types/Options.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f1235c6/src/loggers/PlainLogger.ts#L11">loggers/PlainLogger.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The <code>LogFunction</code>s to which log messages get forwarded.</p>
+							<p>The function that logs the contents</p>
 						</div>
 						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p><a href="../globals.html#logfunction">LogFunction</a></p>
-							</dd>
-							<dt>see</dt>
-							<dd><p><a href="../classes/logger.html">Logger</a></p>
+							<dt>param</dt>
+							<dd></dd>
+							<dt>default</dt>
+							<dd><p><code>console.log</code></p>
 							</dd>
 						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -140,21 +148,21 @@
 					<li class=" tsd-kind-class">
 						<a href="../classes/style.html" class="tsd-kind-icon">Style</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="options.html" class="tsd-kind-icon">Options</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="options.html" class="tsd-kind-icon">Options</a>
+						<a href="plainloggeroptions.html" class="tsd-kind-icon">Plain<wbr>Logger<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="options.html#loggers" class="tsd-kind-icon">loggers</a>
+								<a href="plainloggeroptions.html#logfunction" class="tsd-kind-icon">log<wbr>Function</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="plainloggeroptions.html" class="tsd-kind-icon">Plain<wbr>Logger<wbr>Options</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="serializedtransportformat.html" class="tsd-kind-icon">Serialized<wbr>Transport<wbr>Format</a>
 					</li>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Options | @fliegwerk/logsemts - v0.3.0-7</title>
+	<title>WebhookLoggerOptions | @fliegwerk/logsemts - v0.3.0-7</title>
 	<meta name="description" content="Documentation for @fliegwerk/logsemts - v0.3.0-7">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,33 +54,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="options.html">Options</a>
+					<a href="webhookloggeroptions.html">WebhookLoggerOptions</a>
 				</li>
 			</ul>
-			<h1>Interface Options</h1>
+			<h1>Interface WebhookLoggerOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Options for a logger</p>
-					</div>
-					<dl class="tsd-comment-tags">
-						<dt>see</dt>
-						<dd><p><a href="../classes/logger.html">Logger</a></p>
-						</dd>
-					</dl>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Options</span>
+						<span class="target">WebhookLoggerOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -91,7 +79,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options.html#loggers" class="tsd-kind-icon">loggers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="webhookloggeroptions.html#address" class="tsd-kind-icon">address</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,27 +88,14 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="loggers" class="tsd-anchor"></a>
-					<h3>loggers</h3>
-					<div class="tsd-signature tsd-kind-icon">loggers<span class="tsd-signature-symbol">:</span> <a href="../globals.html#logfunction" class="tsd-signature-type">LogFunction</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="address" class="tsd-anchor"></a>
+					<h3>address</h3>
+					<div class="tsd-signature tsd-kind-icon">address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f1235c6/src/types/Options.ts#L15">types/Options.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f1235c6/src/loggers/WebhookLogger.ts#L7">loggers/WebhookLogger.ts:7</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The <code>LogFunction</code>s to which log messages get forwarded.</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p><a href="../globals.html#logfunction">LogFunction</a></p>
-							</dd>
-							<dt>see</dt>
-							<dd><p><a href="../classes/logger.html">Logger</a></p>
-							</dd>
-						</dl>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -140,18 +115,9 @@
 					<li class=" tsd-kind-class">
 						<a href="../classes/style.html" class="tsd-kind-icon">Style</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="options.html" class="tsd-kind-icon">Options</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="options.html#loggers" class="tsd-kind-icon">loggers</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="plainloggeroptions.html" class="tsd-kind-icon">Plain<wbr>Logger<wbr>Options</a>
 					</li>
@@ -161,9 +127,18 @@
 					<li class=" tsd-kind-interface">
 						<a href="styleinterface.html" class="tsd-kind-icon">Style<wbr>Interface</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="webhookloggeroptions.html" class="tsd-kind-icon">Webhook<wbr>Logger<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="webhookloggeroptions.html#address" class="tsd-kind-icon">address</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#logfunction" class="tsd-kind-icon">Log<wbr>Function</a>
 					</li>
