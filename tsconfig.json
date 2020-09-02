@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "build",
     "declarationDir": "build",
-    "module": "CommonJS",
+    "module": "ES2015",
     "moduleResolution": "Node",
     "target": "ES5",
     "declaration": true,

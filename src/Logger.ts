@@ -1,6 +1,6 @@
 import randomColor from 'randomcolor';
 import Style from './types/Style';
-import ComponentLogger from './ComponentLogger';
+import {ComponentLogger} from './ComponentLogger';
 import { Options } from './types/Options';
 
 /**
@@ -80,6 +80,3 @@ export default class Logger {
 		return this.availableLoggers[componentName];
 	}
 }
-
-export * from './lib/cyclic-serializer';
-export * from './loggers/index';

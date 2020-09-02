@@ -1,4 +1,4 @@
-import ComponentLogger from './ComponentLogger';
+import {ComponentLogger} from './ComponentLogger';
 import MockedFunction = jest.MockedFunction;
 
 describe('ComponentLogger', () => {

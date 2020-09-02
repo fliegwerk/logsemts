@@ -3,8 +3,6 @@ import Style from './types/Style';
 /**
  * A logger for a specific component like _API Client_, _Message Provider_, or similar
  *
- * @internal
- *
  * @example ```ts
  * const = new ComponentLogger((type, style, ...args) => {
  *     const componentStyle = new Style(
@@ -16,7 +14,7 @@ import Style from './types/Style';
  * );
  * ```
  */
-export default class ComponentLogger {
+export class ComponentLogger {
 	/**
 	 * @param semanticLogFunction A semantic log function that can already process the type and style of the semantic log type.
 	 */
