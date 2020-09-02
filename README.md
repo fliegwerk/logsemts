@@ -6,10 +6,11 @@
 
 [npm package](https://npmjs.com/package/@fliegwerk/logsemts)
 | [Library Documentation](https://fliegwerk.github.io/logsemts)
-| ![CI](https://github.com/fliegwerk/logsemts/workflows/CI/badge.svg)
-| ![ShiftLeft Scan](https://github.com/fliegwerk/logsemts/workflows/ShiftLeft%20Scan/badge.svg)
-| ![CodeQL](https://github.com/fliegwerk/logsemts/workflows/CodeQL/badge.svg)
-| [![Coverage Status](https://coveralls.io/repos/github/fliegwerk/logsemts/badge.svg?branch=master)](https://coveralls.io/github/fliegwerk/logsemts?branch=master)
+
+![CI](https://github.com/fliegwerk/logsemts/workflows/CI/badge.svg)
+![ShiftLeft Scan](https://github.com/fliegwerk/logsemts/workflows/ShiftLeft%20Scan/badge.svg)
+![CodeQL](https://github.com/fliegwerk/logsemts/workflows/CodeQL/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/fliegwerk/logsemts/badge.svg?branch=master)](https://coveralls.io/github/fliegwerk/logsemts?branch=master)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/@fliegwerk/logsemts.svg)](https://openbase.io/js/@fliegwerk/logsemts?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
 A modular, color-coded, TypeScript-based semantic logger that can be used in NodeJS, the browser and in many other scenarios.
