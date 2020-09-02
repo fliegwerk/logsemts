@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Logger | @fliegwerk/logsemts - v0.3.0</title>
-	<meta name="description" content="Documentation for @fliegwerk/logsemts - v0.3.0">
+	<title>Logger | @fliegwerk/logsemts - v0.4.0-0</title>
+	<meta name="description" content="Documentation for @fliegwerk/logsemts - v0.4.0-0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@fliegwerk/logsemts - v0.3.0</a>
+					<a href="../index.html" class="title">@fliegwerk/logsemts - v0.4.0-0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -71,11 +71,11 @@
 					</div>
 					<p>Manages a number of LogFunctions, to which logs get passed. These can, e.g., log the entries to the browser console or send it to a remote database.</p>
 					<p>For each subsystem (e.g., an <em>API Client</em>), a new component logger gets used which can be fetched using <a href="logger.html#getcomponentlogger">Logger.getComponentLogger</a></p>
-					<p>This {@link ComponentLogger} then contains multiple semantic logging functions including {@link ComponentLogger.success}, {@link ComponentLogger.error}, {@link ComponentLogger.warn}, and {@link ComponentLogger.debug}.</p>
+					<p>This <a href="componentlogger.html">ComponentLogger</a> then contains multiple semantic logging functions including <a href="componentlogger.html#success">ComponentLogger.success</a>, <a href="componentlogger.html#error">ComponentLogger.error</a>, <a href="componentlogger.html#warn">ComponentLogger.warn</a>, and <a href="componentlogger.html#debug">ComponentLogger.debug</a>.</p>
 					<p>The console output is color-coded. The semantic log levels have pre-defined colors and the components get color-coded with a color that&#39;s from their name.</p>
 					<dl class="tsd-comment-tags">
 						<dt>see</dt>
-						<dd><p>{@link ComponentLogger}</p>
+						<dd><p><a href="componentlogger.html">ComponentLogger</a></p>
 						</dd>
 						<dt>see</dt>
 						<dd><p><a href="../globals.html#logfunction">LogFunction</a></p>
@@ -130,13 +130,13 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Logger<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/options.html" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="logger.html" class="tsd-signature-type">Logger</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Logger<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/loggeroptions.html" class="tsd-signature-type">LoggerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="logger.html" class="tsd-signature-type">Logger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/e5b534f/src/Logger.ts#L40">Logger.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f48d4cb/src/Logger.ts#L39">Logger.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -147,7 +147,7 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../interfaces/options.html" class="tsd-signature-type">Options</a></h5>
+									<h5>options: <a href="../interfaces/loggeroptions.html" class="tsd-signature-type">LoggerOptions</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 										</div>
@@ -167,7 +167,7 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 					<div class="tsd-signature tsd-kind-icon">available<wbr>Loggers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/e5b534f/src/Logger.ts#L40">Logger.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f48d4cb/src/Logger.ts#L39">Logger.ts:39</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -184,7 +184,7 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">ComponentLogger</span></h5>
+								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="componentlogger.html" class="tsd-signature-type">ComponentLogger</a></h5>
 							</li>
 						</ul>
 					</div>
@@ -192,10 +192,10 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="options" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/options.html" class="tsd-signature-type">Options</a></div>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/loggeroptions.html" class="tsd-signature-type">LoggerOptions</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/e5b534f/src/Logger.ts#L46">Logger.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f48d4cb/src/Logger.ts#L45">Logger.ts:45</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -210,13 +210,13 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 					<a name="getcomponentlogger" class="tsd-anchor"></a>
 					<h3>get<wbr>Component<wbr>Logger</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Component<wbr>Logger<span class="tsd-signature-symbol">(</span>componentName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ComponentLogger</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Component<wbr>Logger<span class="tsd-signature-symbol">(</span>componentName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="componentlogger.html" class="tsd-signature-type">ComponentLogger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/e5b534f/src/Logger.ts#L63">Logger.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f48d4cb/src/Logger.ts#L62">Logger.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -233,7 +233,7 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ComponentLogger</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="componentlogger.html" class="tsd-signature-type">ComponentLogger</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -241,13 +241,13 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 					<a name="getsubsystemlogger" class="tsd-anchor"></a>
 					<h3>get<wbr>Subsystem<wbr>Logger</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Subsystem<wbr>Logger<span class="tsd-signature-symbol">(</span>subsystemName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ComponentLogger</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Subsystem<wbr>Logger<span class="tsd-signature-symbol">(</span>subsystemName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="componentlogger.html" class="tsd-signature-type">ComponentLogger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/e5b534f/src/Logger.ts#L55">Logger.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/fliegwerk/logsemts/blob/f48d4cb/src/Logger.ts#L54">Logger.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -269,7 +269,7 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ComponentLogger</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="componentlogger.html" class="tsd-signature-type">ComponentLogger</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -285,6 +285,9 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="componentlogger.html" class="tsd-kind-icon">Component<wbr>Logger</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -313,7 +316,7 @@ logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span
 						<a href="style.html" class="tsd-kind-icon">Style</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/options.html" class="tsd-kind-icon">Options</a>
+						<a href="../interfaces/loggeroptions.html" class="tsd-kind-icon">Logger<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/plainloggeroptions.html" class="tsd-kind-icon">Plain<wbr>Logger<wbr>Options</a>
