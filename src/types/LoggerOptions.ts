@@ -1,11 +1,11 @@
-import LogFunction from './LogFunction';
+import { LogFunction } from './LogFunction';
 
 /**
  * Options for a logger
  *
  * @see {@link Logger}
  */
-export interface Options {
+export interface LoggerOptions {
 	/**
 	 * The `LogFunction`s to which log messages get forwarded.
 	 *

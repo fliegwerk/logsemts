@@ -1,5 +1,5 @@
-import LogFunctionFactory from '../types/LogFunctionFactory';
-import LogFunction from '../types/LogFunction';
+import { LogFunctionFactory } from '../types/LogFunctionFactory';
+import { LogFunction } from '../types/LogFunction';
 
 /**
  * A {@link LogFunctionFactory} to log the the browser developer tools

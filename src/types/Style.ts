@@ -25,7 +25,7 @@ export interface StyleInterface {
  *     background: 'red'
  * }
  */
-export default class Style implements StyleInterface {
+export class Style implements StyleInterface {
 	/**
 	 * Create a new Style
 	 * @param color the text color. Must be a valid CSS color property

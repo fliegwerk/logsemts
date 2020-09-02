@@ -8,7 +8,7 @@ import { StyleInterface } from './Style';
  * @see {@link Logger}
  * @see {@link Style}
  */
-type LogFunction =
+export type LogFunction =
 	/**
 	 * Logs the semantic message to a specific system, e.g., the browser's console
 	 * @param type The semantic type of the message. E.g., `'SUCCESS'`, `'DEBUG'`, or `'ERROR'`
@@ -23,5 +23,3 @@ type LogFunction =
 		componentStyle: StyleInterface,
 		...args: any[]
 	) => void;
-
-export default LogFunction;

@@ -1,7 +1,7 @@
-import LogFunction from '../types/LogFunction';
+import { LogFunction } from '../types/LogFunction';
 import { Chalk } from 'chalk';
 import { StyleInterface } from '../types/Style';
-import LogFunctionFactory from '../types/LogFunctionFactory';
+import { LogFunctionFactory } from '../types/LogFunctionFactory';
 
 /**
  * A {@link LogFunctionFactory} to log the the terminal in NodeJS using the {@link https://github.com/chalk/chalk|chalk} library

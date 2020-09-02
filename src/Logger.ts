@@ -1,7 +1,6 @@
 import randomColor from 'randomcolor';
-import Style from './types/Style';
-import {ComponentLogger} from './ComponentLogger';
-import { Options } from './types/Options';
+import { Style, LoggerOptions } from './types';
+import { ComponentLogger } from './ComponentLogger';
 
 /**
  * The component background color
@@ -43,7 +42,7 @@ export default class Logger {
 	 * Create a new {@link Logger}. Usually gets used only once per application (as a singleton)
 	 * @param options
 	 */
-	constructor(private options: Options) {}
+	constructor(private options: LoggerOptions) {}
 
 	/* istanbul ignore next */
 	/**
@@ -80,3 +79,5 @@ export default class Logger {
 		return this.availableLoggers[componentName];
 	}
 }
+
+export { Logger };

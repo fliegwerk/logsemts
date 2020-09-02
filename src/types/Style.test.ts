@@ -1,4 +1,4 @@
-import Style from './Style';
+import { Style } from './Style';
 
 describe('Style', () => {
 	let style: Style;

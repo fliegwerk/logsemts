@@ -7,10 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- UMD-support
+- compilation using rollup.js
 ### Changed
+- changed default exports to normal exports for better compatibility
+- renamed `Options` to `LoggerOptions`
+- moved types to exported `types` namespace:
+  - `interface LoggerOptions`
+  - `class Style`
+  - `interface StyleInterface`
+  - `type LogFunctionFactory`
+  - `type LogFunction`
 ### Deprecated
 ### Removed
 ### Fixed
+- added `ComponentLogger` to the documentation
 ### Security
 ## [0.3.0] - 2020-09-01
 ## [0.3.0-7] - 2020-08-31
