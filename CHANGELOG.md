@@ -7,22 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.4.0-0] - 2020-09-02
+### Added
 - UMD-support
 - compilation using rollup.js
 ### Changed
 - changed default exports to normal exports for better compatibility
 - renamed `Options` to `LoggerOptions`
 - moved types to exported `types` namespace:
-  - `interface LoggerOptions`
-  - `class Style`
-  - `interface StyleInterface`
-  - `type LogFunctionFactory`
-  - `type LogFunction`
-### Deprecated
-### Removed
+- `interface LoggerOptions`
+- `class Style`
+- `interface StyleInterface`
+- `type LogFunctionFactory`
+- `type LogFunction`
 ### Fixed
 - added `ComponentLogger` to the documentation
-### Security
 ## [0.3.0] - 2020-09-01
 ## [0.3.0-7] - 2020-08-31
 
@@ -165,3 +169,4 @@ Initial prerelease.
 [0.3.0-6]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-5...v0.3.0-6
 [0.3.0-7]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-6...v0.3.0-7
 [0.3.0]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-7...v0.3.0
+[0.4.0-0]: https://github.com/fliegwerk/logsemts/compare/v0.3.0...v0.4.0-0
