@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 ### Fixed
 ### Security
+- Updated `cross-fetch` to resolve vulnerability in its dependency `node-fetch`
 ## [0.4.0-0] - 2020-09-02
 ### Added
 - UMD-support
