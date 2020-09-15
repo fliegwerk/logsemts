@@ -8,12 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
-- improved `README.md`
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
-- Updated `cross-fetch` to resolve vulnerability in its dependency `node-fetch`
+## [0.4.0] - 2020-09-15
+### Changed
+- improved `README.md`
 ## [0.4.0-0] - 2020-09-02
 ### Added
 - UMD-support
@@ -172,3 +173,4 @@ Initial prerelease.
 [0.3.0-7]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-6...v0.3.0-7
 [0.3.0]: https://github.com/fliegwerk/logsemts/compare/v0.3.0-7...v0.3.0
 [0.4.0-0]: https://github.com/fliegwerk/logsemts/compare/v0.3.0...v0.4.0-0
+[0.4.0]: https://github.com/fliegwerk/logsemts/compare/v0.4.0-0...v0.4.0
