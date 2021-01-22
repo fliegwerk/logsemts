@@ -88,7 +88,7 @@ exports[`ComponentLogger should log success messages 1`] = `
 }
 `;
 
-exports[`ComponentLogger should log waring messages 1`] = `
+exports[`ComponentLogger should log warn messages 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [

@@ -10,34 +10,13 @@ describe('ComponentLogger', () => {
 		componentLogger = new ComponentLogger(logFn);
 	});
 
-	it('should log debug messages', () => {
-		componentLogger.debug('Test');
+	(['debug', 'success', 'warn', 'error', 'info'] as const).forEach(
+		functionName =>
+			it(`should log ${functionName} messages`, () => {
+				componentLogger[functionName]('Test');
 
-		expect(logFn).toHaveBeenCalled();
-		expect(logFn).toMatchSnapshot();
-	});
-	it('should log success messages', () => {
-		componentLogger.success('Test');
-
-		expect(logFn).toHaveBeenCalled();
-		expect(logFn).toMatchSnapshot();
-	});
-	it('should log waring messages', () => {
-		componentLogger.warn('Test');
-
-		expect(logFn).toHaveBeenCalled();
-		expect(logFn).toMatchSnapshot();
-	});
-	it('should log error messages', () => {
-		componentLogger.error('Test');
-
-		expect(logFn).toHaveBeenCalled();
-		expect(logFn).toMatchSnapshot();
-	});
-	it('should log info messages', () => {
-		componentLogger.info('Test');
-
-		expect(logFn).toHaveBeenCalled();
-		expect(logFn).toMatchSnapshot();
-	});
+				expect(logFn).toHaveBeenCalled();
+				expect(logFn).toMatchSnapshot();
+			})
+	);
 });
