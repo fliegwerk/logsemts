@@ -1,13 +1,13 @@
-import { LogFunctionFactory } from '../types/LogFunctionFactory';
-import { LogFunction } from '../types/LogFunction';
+import {LogFunction, LogFunctionFactory} from '../types';
 
 /**
  * A {@link LogFunctionFactory} to log the the browser developer tools
  *
- * @return the {@link LogFunction}
+ * See: {@link LogFunction}
+ *
+ * @returns the {@link LogFunction}
  *
  * @category LogFunction / LogFunction Factory
- * @see {@link LogFunction}
  *
  * @example ```ts
  * import { BrowserLogger } from '@fliegwerk/logsemts';
