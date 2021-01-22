@@ -11,6 +11,7 @@
 ![ShiftLeft Scan](https://github.com/fliegwerk/logsemts/workflows/ShiftLeft%20Scan/badge.svg)
 ![CodeQL](https://github.com/fliegwerk/logsemts/workflows/CodeQL/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/fliegwerk/logsemts/badge.svg?branch=master)](https://coveralls.io/github/fliegwerk/logsemts?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c2d8d3ab896d0bb100ea/maintainability)](https://codeclimate.com/github/fliegwerk/logsemts/maintainability)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/@fliegwerk/logsemts.svg)](https://openbase.io/js/@fliegwerk/logsemts?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
 A modular, color-coded, TypeScript-based semantic logger that can be used in NodeJS, the browser and in many other scenarios.
