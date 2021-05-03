@@ -26,6 +26,7 @@
  * - `RegExp`
  * - `Symbol`
  * - `BigInt`
+ * - `Date`
  *
  * ### Special cases
  * - functions get converted to strings (using their `.toString()` method)
@@ -88,6 +89,7 @@ export interface SerializedTransportFormat {
 		| 'function'
 		| 'bigint'
 		| 'regexp'
+		| 'Date'
 	)[];
 }
 
@@ -160,6 +162,8 @@ export function deserialize(serialized: string) {
 			} else {
 				throw new Error('Invalid regular expression string: ' + value);
 			}
+		} else if (instructions.types[index] === 'Date') {
+			return new Date(value)
 		} else if (instructions.types[index] === 'bigint') {
 			return BigInt(value);
 		} else {
@@ -211,7 +215,7 @@ function serializeItem(
 	 */
 	function addModifierForValue(
 		stringify: boolean = false,
-		customType?: 'regexp'
+		customType?: 'regexp' | 'Date'
 	) {
 		const valueExistsInPool = poolIndex >= 0;
 		let index = valueExistsInPool
@@ -231,6 +235,8 @@ function serializeItem(
 		addModifierForValue(true);
 	} else if (value instanceof RegExp) {
 		addModifierForValue(true, 'regexp');
+	} else if (value instanceof Date) {
+		addModifierForValue(true, 'Date')
 	} else if (Array.isArray(value)) {
 		addModifierForValue();
 
