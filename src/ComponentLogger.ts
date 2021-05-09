@@ -1,4 +1,4 @@
-import { Style } from './types/Style';
+import { Style } from './types';
 
 /**
  * A logger for a specific component like _API Client_, _Message Provider_, or similar
