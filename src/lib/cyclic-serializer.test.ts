@@ -77,8 +77,9 @@ describe('serialize()', () => {
 	});
 
 	it('should serialize a Date', () => {
-		const serialized = serialize(new Date(2000, 1, 1));
-		expect(serialized).toMatchSnapshot();
+		const date = new Date(2000, 1, 1);
+		const serialized = serialize(date);
+		expect(deserialize(serialized).toISOString()).toBe(date.toISOString());
 		expect(typeof serialized).toBe('string');
 	});
 });
