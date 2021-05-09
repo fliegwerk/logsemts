@@ -33,7 +33,8 @@
 		"build": "rollup -c",
 		"build:docs": "fliegdoc build",
 		"prettier": "prettier --write package.json \"src/**/*{.ts,.tsx,.js,.jsx}\"",
-		"prettier:ci": "prettier --check package.json \"src/**/*{.ts,.tsx,.js,.jsx}\""
+		"prettier:ci": "prettier --check package.json \"src/**/*{.ts,.tsx,.js,.jsx}\"",
+		"release": "standard-version"
 	},
 	"author": "fliegwerk",
 	"license": "MIT",
