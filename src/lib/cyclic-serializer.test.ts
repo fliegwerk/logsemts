@@ -75,6 +75,12 @@ describe('serialize()', () => {
 		expect(serialized).toMatchSnapshot();
 		expect(typeof serialized).toBe('string');
 	});
+
+	it('should serialize a Date', () => {
+		const serialized = serialize(new Date(2000, 1, 1));
+		expect(serialized).toMatchSnapshot();
+		expect(typeof serialized).toBe('string');
+	});
 });
 
 describe('deserialize()', () => {
@@ -137,5 +143,20 @@ describe('deserialize()', () => {
 		});
 
 		expect(() => deserialize(serialized)).toThrow();
+	});
+
+	it('should deserialize a regular expression', () => {
+		const dateStr =
+			'Tue Feb 01 2000 00:00:00 GMT+0100 (Mitteleuropäische Normalzeit)';
+		const serialized = {
+			pool: [dateStr],
+			pointers: { '': 0 },
+			types: ['Date']
+		};
+
+		let deserialized = deserialize(JSON.stringify(serialized));
+
+		expect(deserialized).toBeInstanceOf(Date);
+		expect(deserialized.toString()).toBe(dateStr);
 	});
 });
