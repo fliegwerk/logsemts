@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/fliegwerk/logsemts/compare/v0.4.1...v0.4.2) (2021-05-09)
+
+
+### Bug Fixes
+
+* **serializer:** Use `toISOString` for JSON `Date` representation ([0b03deb](https://github.com/fliegwerk/logsemts/commit/0b03deb264ea19732876da0b6654edd7b53c945d))
+
 ### [0.4.1](https://github.com/fliegwerk/logsemts/compare/v0.4.0-0...v0.4.1) (2021-05-09)
 
 
