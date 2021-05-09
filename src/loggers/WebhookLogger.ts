@@ -3,7 +3,13 @@ import { LogFunction } from '../types';
 import { serialize } from '../lib/cyclic-serializer';
 import fetch from 'cross-fetch';
 
+/**
+ * Options for the {@link WebhookLogger}
+ */
 export interface WebhookLoggerOptions {
+	/**
+	 * the address to which the `POST` requests for logs get sent
+	 */
 	address: string;
 }
 
@@ -16,6 +22,7 @@ export interface WebhookLoggerOptions {
  * @category LogFunction / LogFunction Factory
  * @see {@link LogFunction}
  * @see {@link serialize}
+ * @see {@link WebhookLoggerOptions}
  *
  * @example ```ts
  * import { WebhookLogger } from '@fliegwerk/logsemts';

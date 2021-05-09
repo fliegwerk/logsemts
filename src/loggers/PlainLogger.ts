@@ -1,6 +1,9 @@
 import { LogFunctionFactory } from '../types';
 import { LogFunction } from '../types';
 
+/**
+ * Options for {@link PlainLogger}
+ */
 export interface PlainLoggerOptions {
 	/**
 	 * The function that logs the contents
@@ -19,6 +22,7 @@ export interface PlainLoggerOptions {
  *
  * @category LogFunction / LogFunction Factory
  * @see {@link LogFunction}
+ * @see {@link PlainLoggerOptions}
  *
  * @example ```ts
  * import { PlainLogger } from '@fliegwerk/logsemts';
