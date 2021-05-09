@@ -1,5 +1,5 @@
-import { LogFunctionFactory } from '../types/LogFunctionFactory';
-import { LogFunction } from '../types/LogFunction';
+import { LogFunctionFactory } from '../types';
+import { LogFunction } from '../types';
 
 export interface PlainLoggerOptions {
 	/**
