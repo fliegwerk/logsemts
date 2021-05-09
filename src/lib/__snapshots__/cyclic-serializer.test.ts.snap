@@ -8,8 +8,6 @@ Object {
 }
 `;
 
-exports[`serialize() should serialize a Date 1`] = `"{\\"pool\\":[\\"2000-01-31T23:00:00.000Z\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"Date\\"]}"`;
-
 exports[`serialize() should serialize a regular expression 1`] = `"{\\"pool\\":[\\"/fwjeofj/g\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"regexp\\"]}"`;
 
 exports[`serialize() should serialize arrays 1`] = `"{\\"pool\\":[[],\\"abc\\",\\"cde\\"],\\"pointers\\":{\\"\\":0,\\"->0\\":1,\\"->1\\":2},\\"types\\":[\\"object\\",\\"string\\",\\"string\\"]}"`;
