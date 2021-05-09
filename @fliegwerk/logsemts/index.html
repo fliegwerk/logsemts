@@ -1,0 +1,1551 @@
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <title>@fliegwerk/logsemts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <style>
+        h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        code {
+            line-height: inherit;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <a href="/logsemts/" class="logo">@fliegwerk/logsemts</a>
+            <a class="button" href="https://github.com/fliegwerk/logsemts" target="_blank">GitHub</a>
+            <a class="button" href="https://www.fliegwerk.com/projects/logsemts" target="_blank">Homepage</a>
+            <a class="button" href="https://medium.com/@pklaschka/semantic-logging-in-js-and-ts-with-the-fliegwerk-logsemts-library-and-why-i-developed-it-d150dfae423f?source=friends_link&amp;sk=4701990c91350ed6d7a81f7ced50133c" target="_blank">Medium Article</a>
+        <div class="spacer"></div>
+    <button onclick="openSearch()"><span class="icon-search"></span> Search: <kbd>Ctrl</kbd>+<kbd>K</kbd></button>
+</header>
+<div class="container">
+    <div class="row">
+        <aside class="col-sm-12 col-md-4 col-lg-3">
+            <nav class="fixed">
+                <a href="/logsemts/">Project README</a>
+                <span>Modules</span>
+                                    <a href="/logsemts/@fliegwerk/logsemts">
+                        <code>
+                            @fliegwerk/logsemts                        </code>
+                    </a>
+                            </nav>
+        </aside>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+<h1><code>@fliegwerk/logsemts</code></h1>
+
+<p>
+    Install using
+</p>
+<pre><code>npm install @fliegwerk/logsemts</code></pre>
+
+<h2>Exported Members</h2>
+<p>You can access these members by importing the module:</p>
+<pre><code>import { <i>member</i> } from '@fliegwerk/logsemts';</code></pre>
+
+<!-- Members -->
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="types" href="#types">
+            <h3><code>types</code></h3></a>
+
+        <!-- Description, based on type -->
+                                <!-- UNRESOLVED TYPE: unknown::SourceFile with {"type":"unknown::SourceFile","declarations":[],"name":"\"/home/runner/work/logsemts/logsemts/src/types/index\""}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="serialize" href="#serialize">
+            <h3><code>serialize</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function serialize
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                value
+                
+                <!-- type -->
+                :
+                any
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Serialize a value to the <a href="#SerializedTransportFormat"><code>SerializedTransportFormat</code></a> specifications</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>value the value that gets serialized</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@return:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the serialized JSON string</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#deserialize"><code>deserialize</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">let a = {};
+let b = { a:a }
+a['b'] = a;
+
+JSON.stringify(a); // throws Error because of cyclic dependency
+
+// serialize a, which returns &quot;instructions&quot; for re-building its structure
+const serialized = serialize(a);
+
+// rebuild a's structure from &quot;instructions&quot;
+const deserialized = deserialize(serialized);
+
+console.log(deserialized); // logs the &quot;correct&quot; structure
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="deserialize" href="#deserialize">
+            <h3><code>deserialize</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function deserialize
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                serialized
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Deserialize a JSON string representing a <a href="#SerializedTransportFormat"><code>SerializedTransportFormat</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>serialized JSON string with a <a href="#SerializedTransportFormat"><code>SerializedTransportFormat</code></a> format</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#serialize"><code>serialize</code></a>.</p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="SerializedTransportFormat" href="#SerializedTransportFormat">
+            <h3><code>SerializedTransportFormat</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            SerializedTransportFormat
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@author:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Pablo Klaschka</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@packageDocumentation:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"></div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">let a = {};
+let b = { a:a }
+a['b'] = a;
+
+JSON.stringify(a); // throws Error because of cyclic dependency
+
+// serialize a, which returns &quot;instructions&quot; for re-building its structure
+const serialized = serialize(a);
+
+// rebuild a's structure from &quot;instructions&quot;
+const deserialized = deserialize(serialized);
+
+console.log(deserialized); // logs the &quot;correct&quot; structure
+</code></pre>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="SerializedTransportFormat.pool" href="#SerializedTransportFormat.pool">
+        <h5><code>
+                                                                                pool                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            any[]        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A memory pool for values the pointers in <a href="#pointers"><code>pointers</code></a> can point to</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="SerializedTransportFormat.pointers" href="#SerializedTransportFormat.pointers">
+        <h5><code>
+                                                                                pointers                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            { [key: string]: number }        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Pointers (indexes) of values stored in the <a href="#pool"><code>pool</code></a> in the order they can get built in.</p>
+<p>Separations are achieved using the <code>-&gt;</code> string.</p>
+<p>The pointer to the serialized value is <code>''</code>, meaning <code>pointers['']</code> is the serialized element's index in the
+<a href="#pool"><code>pool</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-js">// the serialized value points to an object (`s`) that is at index 0 in the pool
+// `s['a']` has the value of an array stored at index 1 in the pool.
+// this array has `s` as its only member, i.e., `s['a'][0] === s`:
+{ '': 0, '-&gt;a': 1, '-&gt;a-&gt;0': 1 }
+</code></pre>
+</div>
+            </div>
+    <a id="SerializedTransportFormat.types" href="#SerializedTransportFormat.types">
+        <h5><code>
+                                                                                types                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (
+	| &#39;undefined&#39;
+	| &#39;object&#39;
+	| &#39;boolean&#39;
+	| &#39;number&#39;
+	| &#39;string&#39;
+	| &#39;symbol&#39;
+	| &#39;function&#39;
+	| &#39;bigint&#39;
+	| &#39;regexp&#39;
+)[]        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The tye of the value in the <a href="#pool"><code>pool</code></a> with the same index.</p>
+<p>Can be either a value &quot;returned&quot; by the <code>typeof</code> operator or a special value for supported types:</p>
+<ul>
+<li><code>regexp</code> - a <code>RegExp</code> object</li>
+</ul>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="BrowserLogger" href="#BrowserLogger">
+            <h3><code>BrowserLogger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            () =&gt; LogFunction        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A <a href="#LogFunctionFactory"><code>LogFunctionFactory</code></a> to log the the browser developer tools</p>
+<p>See: <a href="#LogFunction"><code>LogFunction</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the <a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@category:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>LogFunction / LogFunction Factory</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">import { BrowserLogger } from '@fliegwerk/logsemts';
+
+const loggers = [
+    BrowserLogger() // a LogFunction to log into the browser dev tools
+];
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PlainLoggerOptions" href="#PlainLoggerOptions">
+            <h3><code>PlainLoggerOptions</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PlainLoggerOptions
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Options for <a href="#PlainLogger"><code>PlainLogger</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PlainLoggerOptions.logFunction" href="#PlainLoggerOptions.logFunction">
+        <h5><code>
+                                                                                logFunction                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (...args: any) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The function that logs the contents</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>args</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@default:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><code>console.log</code></p>
+</div>
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PlainLogger" href="#PlainLogger">
+            <h3><code>PlainLogger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            (
+	options?: PlainLoggerOptions
+) =&gt; LogFunction        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A <a href="#LogFunctionFactory"><code>LogFunctionFactory</code></a> to log in environments that don't support color</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@return:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the <a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@category:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>LogFunction / LogFunction Factory</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PlainLoggerOptions"><code>PlainLoggerOptions</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">import { PlainLogger } from '@fliegwerk/logsemts';
+
+const loggers = [
+    PlainLogger(), // a LogFunction to log into the browser dev tools
+    PlainLogger({logFunction: myFunction}) // use myFunction instead of console.log
+];
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ChalkLogger" href="#ChalkLogger">
+            <h3><code>ChalkLogger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            (ch: Chalk) =&gt; LogFunction        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A <a href="#LogFunctionFactory"><code>LogFunctionFactory</code></a> to log the the terminal in NodeJS using the <a href="#https://github.com/chalk/chalk%7Cchalk"><code>https://github.com/chalk/chalk|chalk</code></a> library</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>ch The chalk object.</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the <a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/chalk/chalk"><code>https://github.com/chalk/chalk</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@category:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>LogFunction / LogFunction Factory</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">import { ChalkLogger } from '@fliegwerk/logsemts';
+import chalk from 'chalk';
+
+const loggers = [
+    ChalkLogger(chalk) // generates a new LogFunction using the chalk object
+];
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="WebhookLoggerOptions" href="#WebhookLoggerOptions">
+            <h3><code>WebhookLoggerOptions</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            WebhookLoggerOptions
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Options for the <a href="#WebhookLogger"><code>WebhookLogger</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="WebhookLoggerOptions.address" href="#WebhookLoggerOptions.address">
+        <h5><code>
+                                                                                address                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the address to which the <code>POST</code> requests for logs get sent</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="WebhookLogger" href="#WebhookLogger">
+            <h3><code>WebhookLogger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            (
+	options: WebhookLoggerOptions
+) =&gt; LogFunction        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A <a href="#LogFunctionFactory"><code>LogFunctionFactory</code></a> to send serialized form of message to a specific web address in a POST request</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@return:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the <a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@category:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>LogFunction / LogFunction Factory</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#serialize"><code>serialize</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#WebhookLoggerOptions"><code>WebhookLoggerOptions</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">import { WebhookLogger } from '@fliegwerk/logsemts';
+
+const loggers = [
+    // sends a serialized JSON form of the message to the specified address
+    WebHookLogger({address: 'http://localhost:8080'})
+];
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ComponentLogger" href="#ComponentLogger">
+            <h3><code>ComponentLogger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            class
+            <!-- Name -->
+            ComponentLogger
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A logger for a specific component like <em>API Client</em>, <em>Message Provider</em>, or similar</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const = new ComponentLogger((type, style, ...args) =&gt; {
+    const componentStyle = new Style(
+        'red' // text color
+        componentBackgroundColor // background color
+    );
+
+    logFunction(type, style, componentName, componentStyle, ...args);
+);
+</code></pre>
+</div>
+            </div>
+
+<!-- Constructors -->
+        <h4>Constructors</h4>
+            <a id="ComponentLogger.constructor" href="#ComponentLogger.constructor">
+            <h5><code>constructor</code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function 
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                semanticLogFunction
+                
+                <!-- type -->
+                :
+                (
+	type: string,
+	style: Style,
+	...args: any[]
+) =&gt; void
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>semanticLogFunction A semantic log function that can already process the type and style of the semantic log type.</p>
+</div>
+            </div>
+    
+<!-- Properties -->
+<h4>Properties</h4>
+
+<!-- Methods -->
+    <h4>Methods</h4>
+            <a id="ComponentLogger.debug" href="#ComponentLogger.debug">
+            <h5><code>
+                                                                                                    debug                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function debug
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                ...
+                <!-- parameter name -->
+                args
+                
+                <!-- type -->
+                :
+                any[]
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Log some debug information</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>args information that gets logged</p>
+</div>
+            </div>
+            <a id="ComponentLogger.success" href="#ComponentLogger.success">
+            <h5><code>
+                                                                                                    success                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function success
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                ...
+                <!-- parameter name -->
+                args
+                
+                <!-- type -->
+                :
+                any[]
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Log some success information</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>args information that gets logged</p>
+</div>
+            </div>
+            <a id="ComponentLogger.error" href="#ComponentLogger.error">
+            <h5><code>
+                                                                                                    error                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function error
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                ...
+                <!-- parameter name -->
+                args
+                
+                <!-- type -->
+                :
+                any[]
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Log an error</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>args error information that gets logged</p>
+</div>
+            </div>
+            <a id="ComponentLogger.warn" href="#ComponentLogger.warn">
+            <h5><code>
+                                                                                                    warn                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function warn
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                ...
+                <!-- parameter name -->
+                args
+                
+                <!-- type -->
+                :
+                any[]
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Log a warning</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>args warning that gets logged</p>
+</div>
+            </div>
+            <a id="ComponentLogger.info" href="#ComponentLogger.info">
+            <h5><code>
+                                                                                                    info                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function info
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                ...
+                <!-- parameter name -->
+                args
+                
+                <!-- type -->
+                :
+                any[]
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Log some information</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>args information that gets logged</p>
+</div>
+            </div>
+                            </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Logger" href="#Logger">
+            <h3><code>Logger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            class
+            <!-- Name -->
+            Logger
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A semantic logger written in TypeScript</p>
+<p>Manages a number of LogFunctions, to which logs get passed. These can, e.g., log the entries to the browser console or send it to a remote database.</p>
+<p>For each subsystem (e.g., an <em>API Client</em>), a new component logger gets used which can be fetched using <a href="#Logger.getComponentLogger"><code>Logger.getComponentLogger</code></a></p>
+<p>This <a href="#ComponentLogger"><code>ComponentLogger</code></a> then contains multiple semantic logging functions including <a href="#ComponentLogger.success"><code>ComponentLogger.success</code></a>, <a href="#ComponentLogger.error"><code>ComponentLogger.error</code></a>, <a href="#ComponentLogger.warn"><code>ComponentLogger.warn</code></a>, and <a href="#ComponentLogger.debug"><code>ComponentLogger.debug</code></a>.</p>
+<p>The console output is color-coded. The semantic log levels have pre-defined colors and the components get color-coded with a color that's from their name.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#ComponentLogger"><code>ComponentLogger</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#LogFunction"><code>LogFunction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">import Logger, {BrowserLogger} from '@fliegwerk/logsemts';
+
+const logger = new Logger({loggers: [BrowserLogger]});
+logger.getComponentLogger('API Client').success('fetched API data');
+</code></pre>
+</div>
+            </div>
+
+<!-- Constructors -->
+        <h4>Constructors</h4>
+            <a id="Logger.constructor" href="#Logger.constructor">
+            <h5><code>constructor</code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function 
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                options
+                
+                <!-- type -->
+                :
+                LoggerOptions
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Create a new <a href="#Logger"><code>Logger</code></a>. Usually gets used only once per application (as a singleton)</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>options</p>
+</div>
+            </div>
+    
+<!-- Properties -->
+<h4>Properties</h4>
+
+<!-- Methods -->
+    <h4>Methods</h4>
+            <a id="Logger.getSubsystemLogger" href="#Logger.getSubsystemLogger">
+            <h5><code>
+                                                                                                    getSubsystemLogger                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function getSubsystemLogger
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                subsystemName
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the logger for a specific subsystem or component</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>subsystemName the subsystem's or component's name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@deprecated:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Use <a href="#getComponentLogger"><code>getComponentLogger</code></a> instead.</p>
+</div>
+            </div>
+            <a id="Logger.getComponentLogger" href="#Logger.getComponentLogger">
+            <h5><code>
+                                                                                                    getComponentLogger                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function getComponentLogger
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                componentName
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the logger for a specific component</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>componentName the component's name</p>
+</div>
+            </div>
+                            </div>
+</div>
+</div>
+</div>
+<script src="https://rawcdn.githack.com/nextapps-de/flexsearch/master/dist/flexsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup@2.0.0/dist/bundle.js"></script>
+<script>
+    const searchIndex = new FlexSearch({
+        encode: q => (q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase() + ' ' + q.toLowerCase(),
+        // encode: q => (q.replace(/(.*)[\W.](.*)/g, "$1$2")).toLowerCase(),
+        tokenize: "full",
+        threshold: 0,
+        resolution: 9,
+        depth: 3,
+        doc: {
+            id: 'url',
+            field: ['name', 'text']
+        }
+    });
+
+    function search(q) {
+        q = q || '';
+        return searchIndex.search((q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase(), 5)
+    }
+
+    fetch('/logsemts/search-index.json').then(r => r.json()).then(index => {
+        searchIndex.add(index)
+        const searchPopup = document.createElement('search-popup');
+        searchPopup.setAttribute('search', 'search')
+        document.body.appendChild(searchPopup);
+    });
+</script>
+</body>
+</html>

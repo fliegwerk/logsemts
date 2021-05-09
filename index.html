@@ -1,205 +1,128 @@
-<!doctype html>
-<html class="default no-js">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@fliegwerk/logsemts - v0.4.0</title>
-	<meta name="description" content="Documentation for @fliegwerk/logsemts - v0.4.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+    <meta charset='UTF-8'>
+    <title>@fliegwerk/logsemts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <style>
+        h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        code {
+            line-height: inherit;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
-	<div class="tsd-page-toolbar">
-		<div class="container">
-			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
-					<div class="field">
-						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
-					</div>
-					<ul class="results">
-						<li class="state loading">Preparing search index...</li>
-						<li class="state failure">The search index is not available</li>
-					</ul>
-					<a href="index.html" class="title">@fliegwerk/logsemts - v0.4.0</a>
-				</div>
-				<div class="table-cell" id="tsd-widgets">
-					<div id="tsd-filter">
-						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
-						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
-						</div>
-					</div>
-					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tsd-page-title">
-		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
-			<h1>@fliegwerk/logsemts - v0.4.0</h1>
-		</div>
-	</div>
+    <a href="/logsemts/" class="logo">@fliegwerk/logsemts</a>
+            <a class="button" href="https://github.com/fliegwerk/logsemts" target="_blank">GitHub</a>
+            <a class="button" href="https://www.fliegwerk.com/projects/logsemts" target="_blank">Homepage</a>
+            <a class="button" href="https://medium.com/@pklaschka/semantic-logging-in-js-and-ts-with-the-fliegwerk-logsemts-library-and-why-i-developed-it-d150dfae423f?source=friends_link&amp;sk=4701990c91350ed6d7a81f7ced50133c" target="_blank">Medium Article</a>
+        <div class="spacer"></div>
+    <button onclick="openSearch()"><span class="icon-search"></span> Search: <kbd>Ctrl</kbd>+<kbd>K</kbd></button>
 </header>
-<div class="container container-main">
-	<div class="row">
-		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<p align="center">
-					<img alt="LogSemTS Logo" height="300" src="assets/logo.png" />
-				</p>
-				<a href="#fliegwerklogsemts---a-modular-semantic-logger-written-in-typescript" id="fliegwerklogsemts---a-modular-semantic-logger-written-in-typescript" style="color: inherit; text-decoration: none;">
-					<h1>@fliegwerk/logsemts - A modular, semantic logger written in TypeScript</h1>
-				</a>
-				<p><a href="https://npmjs.com/package/@fliegwerk/logsemts">npm package</a>
-				| <a href="https://fliegwerk.github.io/logsemts">Library Documentation</a></p>
-				<p><img src="https://github.com/fliegwerk/logsemts/workflows/CI/badge.svg" alt="CI">
-					<img src="https://github.com/fliegwerk/logsemts/workflows/ShiftLeft%20Scan/badge.svg" alt="ShiftLeft Scan">
-					<img src="https://github.com/fliegwerk/logsemts/workflows/CodeQL/badge.svg" alt="CodeQL">
-					<a href="https://coveralls.io/github/fliegwerk/logsemts?branch=master"><img src="https://coveralls.io/repos/github/fliegwerk/logsemts/badge.svg?branch=master" alt="Coverage Status"></a>
-				<a href="https://openbase.io/js/@fliegwerk/logsemts?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge"><img src="https://badges.openbase.io/js/rating/@fliegwerk/logsemts.svg" alt="Rate on Openbase"></a></p>
-				<p>A modular, color-coded, TypeScript-based semantic logger that can be used in NodeJS, the browser and in many other scenarios.</p>
-				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
-					<h2>Example</h2>
-				</a>
-				<pre><code class="language-ts"><span class="hljs-comment">// Import the logger:</span>
-<span class="hljs-keyword">import</span> Logger, { BrowserLogger } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@fliegwerk/logsemts&#x27;</span>;
+<div class="container">
+    <div class="row">
+        <aside class="col-sm-12 col-md-4 col-lg-3">
+            <nav class="fixed">
+                <a href="/logsemts/">Project README</a>
+                <span>Modules</span>
+                                    <a href="/logsemts/@fliegwerk/logsemts">
+                        <code>
+                            @fliegwerk/logsemts                        </code>
+                    </a>
+                            </nav>
+        </aside>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+<p>&lt;p align=&quot;center&quot;&gt;
+&lt;img alt=&quot;LogSemTS Logo&quot; height=&quot;300&quot; src=&quot;assets/logo.png&quot; /&gt;
+&lt;/p&gt;</p>
+<h1>@fliegwerk/logsemts - A modular, semantic logger written in TypeScript</h1>
+<p><a href="https://npmjs.com/package/@fliegwerk/logsemts">npm package</a>
+| <a href="https://fliegwerk.github.io/logsemts">Library Documentation</a></p>
+<p><img src="https://github.com/fliegwerk/logsemts/workflows/CI/badge.svg" alt="CI">
+<img src="https://github.com/fliegwerk/logsemts/workflows/ShiftLeft%20Scan/badge.svg" alt="ShiftLeft Scan">
+<img src="https://github.com/fliegwerk/logsemts/workflows/CodeQL/badge.svg" alt="CodeQL">
+<a href="https://coveralls.io/github/fliegwerk/logsemts?branch=master"><img src="https://coveralls.io/repos/github/fliegwerk/logsemts/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://codeclimate.com/github/fliegwerk/logsemts/maintainability"><img src="https://api.codeclimate.com/v1/badges/c2d8d3ab896d0bb100ea/maintainability" alt="Maintainability"></a>
+<a href="https://openbase.io/js/@fliegwerk/logsemts?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge"><img src="https://badges.openbase.io/js/rating/@fliegwerk/logsemts.svg" alt="Rate on Openbase"></a></p>
+<p>A modular, color-coded, TypeScript-based semantic logger that can be used in NodeJS, the browser and in many other scenarios.</p>
+<h2>Example</h2>
+<pre><code class="language-ts">// Import the logger:
+import Logger, { BrowserLogger } from '@fliegwerk/logsemts';
 
-<span class="hljs-comment">// Create a new logger</span>
-<span class="hljs-keyword">const</span> logger = <span class="hljs-keyword">new</span> Logger({
-    loggers: [BrowserLogger()] <span class="hljs-comment">// that exclusively outputs to the browser dev tools</span>
+// Create a new logger
+const logger = new Logger({
+	loggers: [BrowserLogger()] // that exclusively outputs to the browser dev tools
 });
 
-<span class="hljs-comment">// get a new subsystem logger for the API Client</span>
-<span class="hljs-keyword">const</span> apiClientLogger = logger.getComponentLogger(<span class="hljs-string">&#x27;API Client&#x27;</span>);
+// get a new subsystem logger for the API Client
+const apiClientLogger = logger.getComponentLogger('API Client');
 
-<span class="hljs-comment">// log a success message</span>
-apiClientLogger.success(<span class="hljs-string">&#x27;Data fetched successfully&#x27;</span>);</code></pre>
-				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-					<h2>Installation</h2>
-				</a>
-				<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> npm install @fliegwerk/logsemts</span></code></pre>
-				<p>or</p>
-				<pre><code class="language-shell"><span class="hljs-meta">$</span><span class="bash"> yarn add @fliegwerk/logsemts</span></code></pre>
-				<a href="#concept" id="concept" style="color: inherit; text-decoration: none;">
-					<h2>Concept</h2>
-				</a>
-				<p><img src="assets/drawio/concept-overview.png" alt="Concept Overview Diagram"></p>
-				<p>There are three primary components in logsemts:</p>
-				<ul>
-					<li><em>Component Loggers</em>: Logger objects for specific subsystems (for example, an API connector and a login form).
-					These objects contain functions like <code>.log()</code>, <code>.debug()</code>, <code>.warn()</code>, etc. to log messages regarding this subsystem.</li>
-					<li><em>Log Functions</em>: Functions that log a message to a specific target. Targets could be the Browser&#39;s Developer tools, a
-					Database and an API.</li>
-					<li><em>Core</em>: The library&#39;s core consists of the <code>Logger</code> class. Usually, only one instance of that class gets used in an
-						application. It manages the different components (<em>Component Loggers</em> get created using the
-						<code>logger.getComponentLogger(name)</code> function) and <em>Log Functions</em>. It also forwards the messages from the <em>Component
-					Loggers</em> to the registered <em>Log Functions</em>.</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="tsd-navigation secondary menu-sticky">
-				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="classes/componentlogger.html" class="tsd-kind-icon">Component<wbr>Logger</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/logger.html" class="tsd-kind-icon">Logger</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/style.html" class="tsd-kind-icon">Style</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/loggeroptions.html" class="tsd-kind-icon">Logger<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/plainloggeroptions.html" class="tsd-kind-icon">Plain<wbr>Logger<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/serializedtransportformat.html" class="tsd-kind-icon">Serialized<wbr>Transport<wbr>Format</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/styleinterface.html" class="tsd-kind-icon">Style<wbr>Interface</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/webhookloggeroptions.html" class="tsd-kind-icon">Webhook<wbr>Logger<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#logfunction" class="tsd-kind-icon">Log<wbr>Function</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#logfunctionfactory" class="tsd-kind-icon">Log<wbr>Function<wbr>Factory</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#browserlogger" class="tsd-kind-icon">Browser<wbr>Logger</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#chalklogger" class="tsd-kind-icon">Chalk<wbr>Logger</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#plainlogger" class="tsd-kind-icon">Plain<wbr>Logger</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#webhooklogger" class="tsd-kind-icon">Webhook<wbr>Logger</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#deserialize" class="tsd-kind-icon">deserialize</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#serialize" class="tsd-kind-icon">serialize</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
+// log a success message
+apiClientLogger.success('Data fetched successfully');
+</code></pre>
+<h2>Installation</h2>
+<pre><code class="language-shell">$ npm install @fliegwerk/logsemts
+</code></pre>
+<p>or</p>
+<pre><code class="language-shell">$ yarn add @fliegwerk/logsemts
+</code></pre>
+<h2>Concept</h2>
+<p><img src="./assets/1620568752372..png" alt="Concept Overview Diagram"></p>
+<p>There are three primary components in logsemts:</p>
+<ul>
+<li><em>Component Loggers</em>: Logger objects for specific subsystems (for example, an API connector and a login form).
+These objects contain functions like <code>.log()</code>, <code>.debug()</code>, <code>.warn()</code>, etc. to log messages regarding this subsystem.</li>
+<li><em>Log Functions</em>: Functions that log a message to a specific target. Targets could be the Browser's Developer tools, a
+Database and an API.</li>
+<li><em>Core</em>: The library's core consists of the <code>Logger</code> class. Usually, only one instance of that class gets used in an
+application. It manages the different components (<em>Component Loggers</em> get created using the
+<code>logger.getComponentLogger(name)</code> function) and <em>Log Functions</em>. It also forwards the messages from the <em>Component
+Loggers</em> to the registered <em>Log Functions</em>.</li>
+</ul>
 </div>
-<footer class="with-border-bottom">
-	<div class="container">
-		<h2>Legend</h2>
-		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-<div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
-<div class="overlay"></div>
-<script src="assets/js/main.js"></script>
+</div>
+<script src="https://rawcdn.githack.com/nextapps-de/flexsearch/master/dist/flexsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup@2.0.0/dist/bundle.js"></script>
+<script>
+    const searchIndex = new FlexSearch({
+        encode: q => (q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase() + ' ' + q.toLowerCase(),
+        // encode: q => (q.replace(/(.*)[\W.](.*)/g, "$1$2")).toLowerCase(),
+        tokenize: "full",
+        threshold: 0,
+        resolution: 9,
+        depth: 3,
+        doc: {
+            id: 'url',
+            field: ['name', 'text']
+        }
+    });
+
+    function search(q) {
+        q = q || '';
+        return searchIndex.search((q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase(), 5)
+    }
+
+    fetch('/logsemts/search-index.json').then(r => r.json()).then(index => {
+        searchIndex.add(index)
+        const searchPopup = document.createElement('search-popup');
+        searchPopup.setAttribute('search', 'search')
+        document.body.appendChild(searchPopup);
+    });
+</script>
 </body>
 </html>
