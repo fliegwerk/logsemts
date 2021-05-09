@@ -214,13 +214,19 @@ function serializeItem(
 	 * add pointer of path to the value's position in the pool (that gets created if not existent)
 	 */
 	function addModifierForValue(
-		stringify: boolean = false,
+		stringify: boolean | ((value: any) => string) = false,
 		customType?: 'regexp' | 'Date'
 	) {
 		const valueExistsInPool = poolIndex >= 0;
 		let index = valueExistsInPool
 			? poolIndex
-			: instructions.pool.push(stringify ? value.toString() : value) - 1;
+			: instructions.pool.push(
+					stringify
+						? typeof stringify === 'function'
+							? stringify(value)
+							: value.toString()
+						: value
+			  ) - 1;
 		instructions.pointers[path] = index;
 		if (!valueExistsInPool) {
 			instructions.types[index] = customType || typeof value;
@@ -236,7 +242,7 @@ function serializeItem(
 	} else if (value instanceof RegExp) {
 		addModifierForValue(true, 'regexp');
 	} else if (value instanceof Date) {
-		addModifierForValue(true, 'Date');
+		addModifierForValue((date: Date) => date.toISOString(), 'Date');
 	} else if (Array.isArray(value)) {
 		addModifierForValue();
 

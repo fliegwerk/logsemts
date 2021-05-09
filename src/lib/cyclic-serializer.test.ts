@@ -145,9 +145,8 @@ describe('deserialize()', () => {
 		expect(() => deserialize(serialized)).toThrow();
 	});
 
-	it('should deserialize a regular expression', () => {
-		const dateStr =
-			'Tue Feb 01 2000 00:00:00 GMT+0100 (Mitteleuropäische Normalzeit)';
+	it('should deserialize a date', () => {
+		const dateStr = '2000-01-31T23:00:00.000Z';
 		const serialized = {
 			pool: [dateStr],
 			pointers: { '': 0 },
@@ -157,6 +156,6 @@ describe('deserialize()', () => {
 		let deserialized = deserialize(JSON.stringify(serialized));
 
 		expect(deserialized).toBeInstanceOf(Date);
-		expect(deserialized.toString()).toBe(dateStr);
+		expect(deserialized.toISOString()).toBe(dateStr);
 	});
 });

@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`deserialize() should deserialize cyclic properties: deserialized 1`] = `
-Object {
-  "b": Object {
-    "a": [Circular],
-  },
-}
-`;
-
-exports[`serialize() should serialize a Date 1`] = `"{\\"pool\\":[\\"Tue Feb 01 2000 00:00:00 GMT+0100 (Mitteleuropäische Normalzeit)\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"Date\\"]}"`;
+exports[`serialize() should serialize a Date 1`] = `"{\\"pool\\":[\\"2000-01-31T23:00:00.000Z\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"Date\\"]}"`;
 
 exports[`serialize() should serialize a regular expression 1`] = `"{\\"pool\\":[\\"/fwjeofj/g\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"regexp\\"]}"`;
 
@@ -17,32 +9,6 @@ exports[`serialize() should serialize arrays 1`] = `"{\\"pool\\":[[],\\"abc\\",\
 exports[`serialize() should serialize booleans 1`] = `"{\\"pool\\":[true],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"boolean\\"]}"`;
 
 exports[`serialize() should serialize booleans 2`] = `"{\\"pool\\":[false],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"boolean\\"]}"`;
-
-exports[`serialize() should serialize cyclic properties: a 1`] = `
-Object {
-  "b": Object {
-    "a": [Circular],
-  },
-}
-`;
-
-exports[`serialize() should serialize cyclic properties: serialized a 1`] = `
-Object {
-  "pointers": Object {
-    "": 0,
-    "->b": 1,
-    "->b->a": 0,
-  },
-  "pool": Array [
-    Object {},
-    Object {},
-  ],
-  "types": Array [
-    "object",
-    "object",
-  ],
-}
-`;
 
 exports[`serialize() should serialize functions to strings 1`] = `"{\\"pool\\":[\\"function () { return console.log('Hello World!'); }\\"],\\"pointers\\":{\\"\\":0},\\"types\\":[\\"function\\"]}"`;
 
