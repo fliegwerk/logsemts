@@ -163,7 +163,7 @@ export function deserialize(serialized: string) {
 				throw new Error('Invalid regular expression string: ' + value);
 			}
 		} else if (instructions.types[index] === 'Date') {
-			return new Date(value)
+			return new Date(value);
 		} else if (instructions.types[index] === 'bigint') {
 			return BigInt(value);
 		} else {
@@ -236,7 +236,7 @@ function serializeItem(
 	} else if (value instanceof RegExp) {
 		addModifierForValue(true, 'regexp');
 	} else if (value instanceof Date) {
-		addModifierForValue(true, 'Date')
+		addModifierForValue(true, 'Date');
 	} else if (Array.isArray(value)) {
 		addModifierForValue();
 
