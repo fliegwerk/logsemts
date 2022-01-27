@@ -59,7 +59,7 @@
 		"chalk": "^4.1.0"
 	},
 	"dependencies": {
-		"cross-fetch": "^3.0.6",
+		"cross-fetch": "^3.1.5",
 		"randomcolor": "^0.6.2"
 	}
 }
