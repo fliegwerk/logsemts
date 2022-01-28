@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/fliegwerk/logsemts/compare/v0.4.2...v0.4.3) (2022-01-28)
+
+
+### Bug Fixes
+
+* Fix security vulnerabilities in dependencies ([e438f27](https://github.com/fliegwerk/logsemts/commit/e438f275e3ede61ac2db8cf9ee5698c177fcbbf4))
+
 ### [0.4.2](https://github.com/fliegwerk/logsemts/compare/v0.4.1...v0.4.2) (2021-05-09)
 
 
