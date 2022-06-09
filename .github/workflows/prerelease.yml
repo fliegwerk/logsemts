@@ -27,7 +27,7 @@ jobs:
             For release notes, please check the [Changelog](https://github.com/fliegwerk/logsemts/blob/master/CHANGELOG.md).
           draft: false
           prerelease: true
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
