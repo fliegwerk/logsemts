@@ -41,7 +41,7 @@
 	"devDependencies": {
 		"@types/jest": "26.0.10",
 		"@types/randomcolor": "0.5.6",
-		"chalk": "4.1.0",
+		"chalk": "4.1.2",
 		"cpy-cli": "3.1.1",
 		"fliegdoc": "0.5.0",
 		"jest": "26.4.2",
