@@ -17,17 +17,13 @@ import { LogFunction, LogFunctionFactory } from '../types';
  * ];
  * ```
  */
-export const BrowserLogger: () => LogFunction = () => (
-	type,
-	style,
-	componentName,
-	componentStyle,
-	...args: any[]
-) => {
-	console.log(
-		`%c ${type} %c ${componentName} `,
-		style.css,
-		componentStyle.css,
-		...args
-	);
-};
+export const BrowserLogger: () => LogFunction =
+	() =>
+	(type, style, componentName, componentStyle, ...args: any[]) => {
+		console.log(
+			`%c ${type} %c ${componentName} `,
+			style.css,
+			componentStyle.css,
+			...args
+		);
+	};
