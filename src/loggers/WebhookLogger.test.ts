@@ -1,7 +1,8 @@
 import fetch from 'cross-fetch';
 import { WebhookLogger } from './WebhookLogger';
-import { mocked } from 'ts-jest/utils';
 import { serialize } from '../lib/cyclic-serializer';
+
+const { mocked } = jest;
 
 const style1 = {
 	color: 'black',
