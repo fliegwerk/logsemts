@@ -3,8 +3,9 @@ import { StyleInterface } from '../types/Style';
 
 import ch from 'chalk';
 jest.mock('chalk');
-import { mocked } from 'ts-jest/utils';
 import Mock = jest.Mock;
+
+const { mocked } = jest;
 
 const origLog = console.log;
 
