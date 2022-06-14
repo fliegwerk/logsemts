@@ -45,7 +45,7 @@
 		"cpy-cli": "3.1.1",
 		"fliegdoc": "0.5.2",
 		"jest": "28.1.1",
-		"prettier": "2.6.2",
+		"prettier": "2.7.0",
 		"rollup": "2.75.6",
 		"rollup-plugin-commonjs": "10.1.0",
 		"rollup-plugin-sourcemaps": "0.6.3",
