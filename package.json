@@ -46,7 +46,7 @@
 		"fliegdoc": "0.5.2",
 		"jest": "28.1.3",
 		"prettier": "2.7.1",
-		"rollup": "2.76.0",
+		"rollup": "2.77.0",
 		"rollup-plugin-commonjs": "10.1.0",
 		"rollup-plugin-sourcemaps": "0.6.3",
 		"rollup-plugin-typescript2": "0.32.1",
