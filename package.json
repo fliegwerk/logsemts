@@ -39,7 +39,7 @@
 	"author": "fliegwerk",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/jest": "28.1.5",
+		"@types/jest": "28.1.6",
 		"@types/randomcolor": "0.5.6",
 		"chalk": "4.1.2",
 		"cpy-cli": "3.1.1",
